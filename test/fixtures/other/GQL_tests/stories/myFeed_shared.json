@@ -1,0 +1,24 @@
+{
+  "data": {
+    "myFeed": {
+      "docs": [
+        {
+          "title": "Shared Collaboration Story #1",
+          "slug": "shared-collaboration-story-1",
+          "views": 100,
+          "deleted": "false"
+        },
+        {
+          "title": "Lorem ipsum dolor 1",
+          "slug": "lorem-ipsum-dolor-1",
+          "views": 100,
+          "deleted": "true"
+        }
+      ],
+      "total": 2,
+      "limit": 10,
+      "page": 1,
+      "pages": 1
+    }
+  }
+}

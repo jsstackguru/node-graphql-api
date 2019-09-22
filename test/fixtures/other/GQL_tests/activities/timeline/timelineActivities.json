@@ -1,0 +1,110 @@
+{
+  "data": {
+    "activityTimeline": {
+      "docs": [{
+        "author": {
+          "name": "sasha"
+        },
+        "story": {
+          "title": "Shared Collaboration Story #1"
+        },
+        "contents": [{
+          "type": "gallery",
+          "url": null,
+          "contentId": "6d669ad1-c08e-11e8-ae20-fd79c470db9d",
+          "created": "2018-07-11 16:26:09+0200",
+          "updated": "2018-07-11 16:26:09+0200",
+          "matchId": "x-coredata:///RECoreDataContentGallery/tAA912C53-6562-4B95-99B2-7E04721497875",
+          "date": "2018-09-25T06:43:35.886Z",
+          "sections": [{
+            "itemProportionWidth": "114.3333",
+            "itemProportionHeight": "152.4444",
+            "position": "0",
+            "images": [{
+              "image": "http://rekordr.s3.amazonaws.com/images/5ba9d942c61d3c0f00ec0e44/6d66c1e0-c08e-11e8-ae20-fd79c470db9d.jpeg",
+              "thumb": "http://rekordr.s3.amazonaws.com/images/5ba9d942c61d3c0f00ec0e44/6d66c1e1-c08e-11e8-ae20-fd79c470db9d_thumb.jpeg",
+              "thumb2": "http://rekordr.s3.amazonaws.com/images/5ba9d942c61d3c0f00ec0e44/6d66c1e2-c08e-11e8-ae20-fd79c470db9d_thumb2.jpeg",
+              "id": "6d68e4c0-c08e-11e8-ae20-fd79c470db9d",
+              "size": 269124
+            }, {
+              "image": "http://rekordr.s3.amazonaws.com/images/5ba9d942c61d3c0f00ec0e44/6d68e4c1-c08e-11e8-ae20-fd79c470db9d.jpeg",
+              "thumb": "http://rekordr.s3.amazonaws.com/images/5ba9d942c61d3c0f00ec0e44/6d68e4c2-c08e-11e8-ae20-fd79c470db9d_thumb.jpeg",
+              "thumb2": "http://rekordr.s3.amazonaws.com/images/5ba9d942c61d3c0f00ec0e44/6d68e4c3-c08e-11e8-ae20-fd79c470db9d_thumb2.jpeg",
+              "id": "6d6932e0-c08e-11e8-ae20-fd79c470db9d",
+              "size": 328966
+            }, {
+              "image": "http://rekordr.s3.amazonaws.com/images/5ba9d942c61d3c0f00ec0e44/6d6932e1-c08e-11e8-ae20-fd79c470db9d.jpeg",
+              "thumb": "http://rekordr.s3.amazonaws.com/images/5ba9d942c61d3c0f00ec0e44/6d6932e2-c08e-11e8-ae20-fd79c470db9d_thumb.jpeg",
+              "thumb2": "http://rekordr.s3.amazonaws.com/images/5ba9d942c61d3c0f00ec0e44/6d6932e3-c08e-11e8-ae20-fd79c470db9d_thumb2.jpeg",
+              "id": "6d69a810-c08e-11e8-ae20-fd79c470db9d",
+              "size": 305106
+            }],
+            "id": "6d69a811-c08e-11e8-ae20-fd79c470db9d"
+          }],
+          "caption": "njam njam njam",
+          "place": {
+            "lat": "45.25975396395219",
+            "lon": "19.79928039016183",
+            "name": "Ulica Lenke Dunđerski",
+            "addr": "Ulica Lenke Dunđerski, 21124, Serbia"
+          }
+        }, {
+          "type": "video",
+          "url": "http://rekordr-videos.s3.amazonaws.com/5ba9d942c61d3c0f00ec0e44/42823c10-c7a6-11e8-b4c5-2971eb1d35e1.mov",
+          "image": "http://rekordr-videos.s3.amazonaws.com/images/5ba9d942c61d3c0f00ec0e44/42be0c90-c7a6-11e8-b4c5-2971eb1d35e1.jpg",
+          "rtmp": "rtmp://s22evx7jej0vhx.cloudfront.net/5ba9d942c61d3c0f00ec0e44/42823c10-c7a6-11e8-b4c5-2971eb1d35e1.mov",
+          "contentId": "424ef710-c7a6-11e8-b4c5-2971eb1d35e1",
+          "caption": "idemooo",
+          "created": "2018-07-11 16:26:09+0200",
+          "updated": "2018-07-11 16:26:09+0200",
+          "matchId": "x-coredata:///RECoreDataContentVideo/t17C47200-2227-400D-9242-72BAC67CF17527",
+          "date": "2018-10-03T09:36:16.649Z",
+          "place": {
+            "lat": "45.25497524173112",
+            "lon": "19.79655638891873",
+            "name": "Bulevar vojvode Stepe 67–79",
+            "addr": "Bulevar vojvode Stepe 67–79, 21137, Serbia"
+          },
+          "videoId": null,
+          "video": null,
+          "size": 7751272,
+          "duration": {
+            "raw": "00:00:10.17",
+            "seconds": 10
+          },
+          "width": 1920,
+          "height": 1080
+        }],
+        "type": "new_content"
+      }, {
+        "author": {
+          "name": "sasha"
+        },
+        "story": {
+          "title": "Story #1"
+        },
+        "contents": null,
+        "type": "story_updated"
+      }, {
+        "author": {
+          "name": "sasha"
+        },
+        "story": {
+          "title": "Story #1"
+        },
+        "contents": null,
+        "type": "page_created"
+      }, {
+        "author": {
+          "name": "sasha"
+        },
+        "story": {
+          "title": "Story #1"
+        },
+        "contents": null,
+        "type": "story_created"
+      }],
+      "total": 4
+    }
+  }
+}

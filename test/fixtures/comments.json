@@ -1,0 +1,68 @@
+[
+  {
+    "_id": "5b29f711d216c70e00c357b7",
+    "author": "58eb78b94b432a21008c2346",
+    "text": "komentar 1",
+    "created": "2018-06-22T06:41:21.801Z",
+    "deleted": false,
+    "page": "593f94bd17d85a0e003d3c36",
+    "active": true,
+    "spam": 0,
+    "reply": null
+  },
+  {
+    "_id": "5b2a47b2d216c70e00c357d2",
+    "author": "58eb78b94b432a21008c2347",
+    "text": "komentar 5",
+    "created": "2018-07-12T12:25:22.100Z",
+    "deleted": false,
+    "page": "593f94bd17d85a0e003d3c36",
+    "active": true,
+    "spam": 0,
+    "reply": null
+  },
+  {
+    "_id": "58eb78b94b432a21008c2348",
+    "author": "5a538361ea64260e00eb7546",
+    "text": "komentar 2",
+    "created": "2018-04-20T06:11:27.835Z",
+    "deleted": false,
+    "page": "593f94bd17d85a0e003d3c36",
+    "active": true,
+    "spam": 0,
+    "reply": null
+  },
+  {
+    "_id": "5b29f71bd216c70e00c357bc",
+    "author": "5a538361ea64260e00eb7546",
+    "text": "komentar reply 1",
+    "created": "2018-08-10T06:31:31.934Z",
+    "deleted": false,
+    "page": "593f94bd17d85a0e003d3c36",
+    "active": true,
+    "spam": 0,
+    "reply": "5b29f711d216c70e00c357b7"
+  },
+  {
+    "_id": "5b29f722d216c70e00c357bf",
+    "author": "5a538361ea64260e00eb7546",
+    "text": "komentar reply 2",
+    "created": "2018-09-20T06:41:38.157Z",
+    "deleted": false,
+    "page": "593f94bd17d85a0e003d3c36",
+    "active": true,
+    "spam": 0,
+    "reply": "5b29f711d216c70e00c357b7"
+  },
+  {
+    "_id": "5b29f722d216c70e00c357bb",
+    "author": "5a538361ea64260e00eb7546",
+    "text": "komentar reply 22",
+    "created": "2018-10-20T06:41:38.157Z",
+    "deleted": false,
+    "page": "5939503417d85a0e003d3c2f",
+    "active": true,
+    "spam": 0,
+    "reply": "5b29f711d216c70e00c357b7"
+  }
+]

@@ -1,0 +1,235 @@
+{
+  "data": {
+    "authorsSearch": {
+      "docs": [{
+          "name": "sasha",
+          "username": "sasha",
+          "email": "sasateodorovic57@istoryapp.com",
+          "avatar": "http://rekordr.s3.amazonaws.com/profile/58eb78b94b432a21008c2346/165627e0-1de9-11e7-aeb3-d3719b357d20.jpeg",
+          "bio": "Teste testetstets tetstetstetstetstte tetstetstetste tetstetstetstetstetste tetstetste  ttstetstet. Testetstets t",
+          "firstTime": "true",
+          "location": {
+            "name": "Novi Sad",
+            "lon": "19.8369444",
+            "lat": "45.2516667"
+          },
+          "pushNotif": {
+            "newFollower": "true"
+          },
+          "notif": {
+            "collaboration": {
+              "newCollaborator": "true"
+            },
+            "social": {
+              "comments": "true",
+              "newFollower": "true"
+            }
+          }
+        },
+        {
+          "name": "sajko",
+          "username": "sajko",
+          "email": "manualtester79@gmail.com",
+          "avatar": "http://rekordr.s3.amazonaws.com/profile/5a7d7373231b6b0e008fd2a6/2027a690-1177-11e8-9b8f-2d27e840e389.jpeg",
+          "bio": "",
+          "firstTime": "true",
+          "location": {
+            "name": "Ulica Svetozara Ćorovića",
+            "lon": "19.80300021763217",
+            "lat": "45.25124693792889"
+          },
+          "pushNotif": {
+            "newFollower": "true"
+          },
+          "notif": {
+            "collaboration": {
+              "newCollaborator": "true"
+            },
+            "social": {
+              "comments": "true",
+              "newFollower": "true"
+            }
+          }
+        },
+        {
+          "name": "nikola",
+          "username": "nikola",
+          "email": "nidzoliki@istoryapp.com",
+          "avatar": null,
+          "bio": "",
+          "firstTime": "true",
+          "location": {
+            "name": "",
+            "lon": null,
+            "lat": null
+          },
+          "pushNotif": {
+            "newFollower": "true"
+          },
+          "notif": {
+            "collaboration": {
+              "newCollaborator": "true"
+            },
+            "social": {
+              "comments": "true",
+              "newFollower": "true"
+            }
+          }
+        },
+        {
+          "name": "Test Author2",
+          "username": "testauthor2",
+          "email": "testauthor2@istoryapp.com",
+          "avatar": "",
+          "bio": "Test account #2",
+          "firstTime": "false",
+          "location": {
+            "name": "",
+            "lon": null,
+            "lat": null
+          },
+          "pushNotif": {
+            "newFollower": "true"
+          },
+          "notif": {
+            "collaboration": {
+              "newCollaborator": "true"
+            },
+            "social": {
+              "comments": "true",
+              "newFollower": "true"
+            }
+          }
+        },
+        {
+          "name": "Test Author1",
+          "username": "testauthor1",
+          "email": "testauthor1@istoryapp.com",
+          "avatar": "",
+          "bio": "Test account #1",
+          "firstTime": "false",
+          "location": {
+            "name": "",
+            "lon": null,
+            "lat": null
+          },
+          "pushNotif": {
+            "newFollower": "true"
+          },
+          "notif": {
+            "collaboration": {
+              "newCollaborator": "true"
+            },
+            "social": {
+              "comments": "true",
+              "newFollower": "true"
+            }
+          }
+        },
+        {
+          "name": "Group Member 4",
+          "username": "group4",
+          "email": "group4@istoryapp.com",
+          "avatar": null,
+          "bio": "",
+          "firstTime": "true",
+          "location": {
+            "name": "",
+            "lon": null,
+            "lat": null
+          },
+          "pushNotif": {
+            "newFollower": "true"
+          },
+          "notif": {
+            "collaboration": {
+              "newCollaborator": "true"
+            },
+            "social": {
+              "comments": "true",
+              "newFollower": "true"
+            }
+          }
+        },
+        {
+          "name": "Group Member 3",
+          "username": "group3",
+          "email": "group3@istoryapp.com",
+          "avatar": null,
+          "bio": "",
+          "firstTime": "true",
+          "location": {
+            "name": "",
+            "lon": null,
+            "lat": null
+          },
+          "pushNotif": {
+            "newFollower": "true"
+          },
+          "notif": {
+            "collaboration": {
+              "newCollaborator": "true"
+            },
+            "social": {
+              "comments": "true",
+              "newFollower": "true"
+            }
+          }
+        },
+        {
+          "name": "Group Member 2",
+          "username": "group2",
+          "email": "group2@istoryapp.com",
+          "avatar": null,
+          "bio": "",
+          "firstTime": "true",
+          "location": {
+            "name": "",
+            "lon": null,
+            "lat": null
+          },
+          "pushNotif": {
+            "newFollower": "true"
+          },
+          "notif": {
+            "collaboration": {
+              "newCollaborator": "true"
+            },
+            "social": {
+              "comments": "true",
+              "newFollower": "true"
+            }
+          }
+        },
+        {
+          "name": "Group Member 1",
+          "username": "group1",
+          "email": "group1@istoryapp.com",
+          "avatar": null,
+          "bio": "",
+          "firstTime": "true",
+          "location": {
+            "name": "",
+            "lon": null,
+            "lat": null
+          },
+          "pushNotif": {
+            "newFollower": "true"
+          },
+          "notif": {
+            "collaboration": {
+              "newCollaborator": "true"
+            },
+            "social": {
+              "comments": "true",
+              "newFollower": "true"
+            }
+          }
+        }
+      ],
+      "limit": 10,
+      "page": 1,
+      "total": 9
+    }
+  }
+}

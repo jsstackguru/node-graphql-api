@@ -1,0 +1,148 @@
+{
+  "name": "istory-api",
+  "description": "iStory API",
+  "dependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "agenda": "^2.0.2",
+    "agendash": "^0.4.0",
+    "apn": "^2.2.0",
+    "async": "^2.6.1",
+    "aws-sdk": "^2.304.0",
+    "body-parser": "^1.18.3",
+    "connect-multiparty": "^2.2.0",
+    "dotenv": "^6.0.0",
+    "dtrace-provider": "^0.8.7",
+    "eslint": "^5.1.0",
+    "express": "^4.16.3",
+    "express-graphql": "^0.6.12",
+    "extend": "^3.0.1",
+    "faker": "^4.1.0",
+    "ffmpeg": "0.0.4",
+    "ffmpeg-probe": "^1.0.5",
+    "gm": "^1.23.1",
+    "graphql": "^0.13.2",
+    "graphql-type-json": "^0.2.1",
+    "i18n-nodejs": "^3.0.0",
+    "jsonwebtoken": "^8.3.0",
+    "mkdirp": "^0.5.1",
+    "mock-aws-s3": "^3.0.0",
+    "mongoose": "^5.4.3",
+    "mongoose-api-query": "^0.1.1-pre",
+    "mongoose-migrate-2": "^0.2.5",
+    "mongoose-paginate": "^5.0.3",
+    "multer": "^1.4.0",
+    "node-uuid": "^1.4.8",
+    "orm": "^5.0.2",
+    "postageapp": "^2.0.0",
+    "printj": "^1.2.1",
+    "rand-token": "^0.4.0",
+    "restify": "^4.3.4",
+    "rimraf": "^2.6.3",
+    "slug": "^0.9.1",
+    "underscore": "^1.9.1",
+    "validator": "^7.2.0",
+    "winston": "^3.0.0",
+    "zip-a-folder": "0.0.7"
+  },
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {
+    "@babel/node": "^7.2.2",
+    "@babel/register": "^7.4.4",
+    "apidoc": "^0.17.7",
+    "assert": "^1.4.1",
+    "chai": "^4.2.0",
+    "chai-arrays": "^2.0.0",
+    "chai-http": "^4.2.0",
+    "eslint-watch": "^4.0.2",
+    "expect": "^23.6.0",
+    "jsdoc": "^3.5.5",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.2",
+    "nyc": "^13.1.0",
+    "should": "^11.2.1",
+    "source-map-support": "^0.5.12",
+    "supertest": "^3.1.0"
+  },
+  "scripts": {
+    "agenda": "nodemon src/services/jobs/index.js --exec babel-node --presets babel-preset-env",
+    "agendash": "./node_modules/.bin/agendash --db=mongodb://localhost/istory_agenda --collection=agendaCollection --port=3001",
+    "api:docs": "node_modules/apidoc/bin/apidoc -i src/ -o v1",
+    "build": "rimraf dist/ && ./node_modules/.bin/babel src --out-dir dist",
+    "coverage": "open ./test/_coverage/index.html",
+    "docs": "open ./v3/index.html",
+    "eslint": "eslint \"src/**/*.js\" --env mocha",
+    "eslint:fix": "eslint \"src/**/*.js\" --fix --env mocha",
+    "eslint:watch": "node node_modules/eslint-watch/bin/esw -w",
+    "eslint:w:gql": "node node_modules/eslint-watch/bin/esw -w src/GQLSchema",
+    "migrate": "MIGRATION_CONFIG_PATH=./migrations/config.js babel-node ./node_modules/mongoose-migrate-2/bin/migrate -c ./src",
+    "start": "nodemon src/index.js --exec babel-node --presets @babel/env",
+    "serve": "NODE_ENV=production node dist/index.js",
+    "test": "nyc mocha test --require @babel/register --require @babel/polyfill --require source-map-support/register -R progress",
+    "test:watch": "nyc mocha test --require @babel/register --require @babel/polyfill --require source-map-support/register --watch -R progress",
+    "test:build": "mocha test --require @babel/register --require @babel/polyfill --require source-map-support",
+    "test:nyc": "nyc mocha test --require @babel/register --require @babel/polyfill"
+  },
+  "nyc": {
+    "check-coverage": false,
+    "reporter": [
+      "text-summary",
+      "html",
+      "text"
+    ],
+    "cache": true,
+    "all": true,
+    "report-dir": "./test/_coverage",
+    "exclude": [
+      "dist",
+      "out",
+      "test",
+      "src/migrations",
+      "v1"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/nikcom/rekordr-api.git"
+  },
+  "keywords": [
+    "Rekordr",
+    "API"
+  ],
+  "author": "Nikola Miljkovic",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/nikcom/rekordr-api#readme",
+  "standard": {
+    "ignore": [
+      "/out/",
+      "/test/",
+      "/v3/",
+      "ecosystem.config.js",
+      "/src/app.js",
+      "/src/index.js",
+      "/src/services/jobs",
+      "/src/services/push-notification/"
+    ],
+    "globals": [
+      "server"
+    ]
+  },
+  "apidoc": {
+    "name": "iStory API",
+    "version": "1.1.0",
+    "description": "iStory API documentation",
+    "apidoc": {
+      "title": "",
+      "url": "http://api.istoryapp.com/v3"
+    }
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "*.test.js",
+      "test/*"
+    ]
+  }
+}

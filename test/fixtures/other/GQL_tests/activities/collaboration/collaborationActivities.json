@@ -1,0 +1,52 @@
+{
+  "data": {
+    "activityCollaboration": {
+      "docs": [{
+        "author": {
+          "name": "sasha"
+        },
+        "story": {
+          "title": "Story #1"
+        },
+        "collaborator": {
+          "name": "nikola"
+        },
+        "type": "collaboration_removed"
+      }, {
+        "author": {
+          "name": "sasha"
+        },
+        "story": {
+          "title": "Story #1"
+        },
+        "collaborator": {
+          "name": "Test Author2"
+        },
+        "type": "collaboration_leaved"
+      }, {
+        "author": {
+          "name": "sasha"
+        },
+        "story": {
+          "title": "Story #1"
+        },
+        "collaborator": {
+          "name": "Test Author1"
+        },
+        "type": "collaboration_invitation_accepted"
+      }, {
+        "author": {
+          "name": "sasha"
+        },
+        "story": {
+          "title": "Story #1"
+        },
+        "collaborator": {
+          "name": "Test Author1"
+        },
+        "type": "collaboration_invitation_sent"
+      }],
+      "total": 4
+    }
+  }
+}

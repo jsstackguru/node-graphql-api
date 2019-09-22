@@ -1,0 +1,80 @@
+[
+  {
+    "_id": "5c38beadacbe7a78b1f4c6f1",
+    "id": "5c38beadacbe7a78b1f4c6f1",
+    "author": "18eb78b94b432a21008c2348",
+    "invited": {
+      "author": null,
+      "email": "sasha@istoryapp.com"
+    },
+    "token": "invitation1",
+    "active": true,
+    "accepted": null,
+    "created": "2018-12-18 14:21:13+0200"
+  },
+  {
+    "_id": "5c38beadacbe7a78b1f4c6f2",
+    "id": "5c38beadacbe7a78b1f4c6f2",
+    "author": "58eb78b94b432a21008c2347",
+    "invited": {
+      "author": null,
+      "email": "sasha@istoryapp.com"
+    },
+    "token": "invitation2",
+    "active": false,
+    "accepted": false,
+    "created": "2018-12-18 14:21:13+0200"
+  },
+  {
+    "_id": "5c38beadacbe7a78b1f4c6f3",
+    "id": "5c38beadacbe7a78b1f4c6f3",
+    "author": "58eb78b94b432a21008c2346",
+    "invited": {
+      "author": "58eb78b94b432a21008c2347",
+      "email": "testauthor1@istoryapp.com"
+    },
+    "token": "invitation3",
+    "active": true,
+    "accepted": true,
+    "created": "2018-12-18 14:21:13+0200"
+  },
+  {
+    "_id": "5c38beadacbe7a78b1f4c6f4",
+    "id": "5c38beadacbe7a78b1f4c6f4",
+    "author": "58eb78b94b432a21008c2346",
+    "invited": {
+      "author": "5a538361ea64260e00eb7546",
+      "email": "nidzoliki@istoryapp.com"
+    },
+    "token": "invitation4",
+    "active": true,
+    "accepted": null,
+    "created": "2018-12-19 14:29:13+0200"
+  },
+  {
+    "_id": "5c38beadacbe7a78b1f4c6f5",
+    "id": "5c38beadacbe7a78b1f4c6f5",
+    "author": "58eb78b94b432a21008c2347",
+    "invited": {
+      "author": null,
+      "email": "fakemail1@istoryapp.com"
+    },
+    "token": "invitation5",
+    "active": true,
+    "accepted": null,
+    "created": "2018-12-24 16:19:13+0200"
+  },
+  {
+    "_id": "5c38beadacbe7a78b1f4c6f6",
+    "id": "5c38beadacbe7a78b1f4c6f6",
+    "author": "58eb78b94b432a21008c2347",
+    "invited": {
+      "author": null,
+      "email": "fakemail2@istoryapp.com"
+    },
+    "token": "invitation6",
+    "active": true,
+    "accepted": false,
+    "created": "2018-12-24 16:29:13+0200"
+  }
+]

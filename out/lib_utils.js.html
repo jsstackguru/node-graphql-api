@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: lib/utils.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: lib/utils.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @file Common functions
+ * @author Andrey Ponomarov &lt;andrey.ponom1222@gmail.com>
+ * @version 1.0
+ */
+
+const crypto = require('crypto')
+const validator = require('validator')
+const _ = require('underscore')
+
+/**
+ * generate password
+ *
+ * @param {String}  password
+ * @return {String} generated password
+ */
+module.exports.generatePassword = function (password) {
+  // @TODO insert salt for password
+  var sha1sum = crypto.createHash('sha1')
+  sha1sum.update(password)
+  return sha1sum.digest('hex')
+}
+
+/**
+ * Validate email address
+ * @param {string} email Email address for validation
+ * @returns {boolean}
+ */
+module.exports.isValidEmail = (email) => {
+  return validator.isEmail(email)
+}
+
+/**
+ * Validate username
+ *
+ * @param {string} username Username for validation
+ * @returns {null | string}
+ */
+module.exports.validateUsername = (username) => {
+  var error = null
+  var illegalChars = /\W/ // allow letters, numbers, and underscores
+
+  if (username === '') {
+    error = 'You didn\'t enter a username'
+  } else if (username.length > 15) {
+    error = 'Username is longer then 15 characters'
+  } else if (illegalChars.test(username)) {
+    error = 'The username contains illegal characters'
+  }
+  return error
+}
+
+/**
+ * Validate password
+ *
+ * @param {String} password Password for validation
+ * @returns {null | String}
+ */
+module.exports.validatePassword = (password) => {
+  var error = null
+
+  if (password === '') {
+    error = 'You didn\'t enter a password'
+  } else if (_.size(password) > 15) {
+    error = 'Password is longer then 15 characters'
+  } else if (_.size(password) &lt; 6) {
+    error = 'Password must be 6 charachters at least'
+  }
+
+  return error
+}
+
+/**
+ * generate validation code
+ *
+ * @param {string} email    email for validation
+ * @returns {string}
+ */
+module.exports.emailValidationCode = function (email) {
+  var md5sum = crypto.createHash('md5')
+  md5sum.update(email)
+  return md5sum.digest('hex')
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#activation">activation</a></li><li><a href="global.html#all">all</a></li><li><a href="global.html#authentication">authentication</a></li><li><a href="global.html#authorize">authorize</a></li><li><a href="global.html#checkEmail">checkEmail</a></li><li><a href="global.html#checkUsername">checkUsername</a></li><li><a href="global.html#create">create</a></li><li><a href="global.html#emailExists">emailExists</a></li><li><a href="global.html#emailValidationCode">emailValidationCode</a></li><li><a href="global.html#fetchingResponseV3">fetchingResponseV3</a></li><li><a href="global.html#forgotPassword">forgotPassword</a></li><li><a href="global.html#generatePassword">generatePassword</a></li><li><a href="global.html#getAuthToken">getAuthToken</a></li><li><a href="global.html#getById">getById</a></li><li><a href="global.html#getCollaborationStories">getCollaborationStories</a></li><li><a href="global.html#getMyRekords">getMyStories</a></li><li><a href="global.html#getSharedStories">getSharedStories</a></li><li><a href="global.html#isValidEmail">isValidEmail</a></li><li><a href="global.html#log">log</a></li><li><a href="global.html#login">login</a></li><li><a href="global.html#myRekordr">myStories</a></li><li><a href="global.html#paginateV3">paginateV3</a></li><li><a href="global.html#queryForStorySearch">queryForStorySearch</a></li><li><a href="global.html#resetPassword">resetPassword</a></li><li><a href="global.html#search">search</a></li><li><a href="global.html#searchAuthors">searchAuthors</a></li><li><a href="global.html#send">send</a></li><li><a href="global.html#sendV3">sendV3</a></li><li><a href="global.html#server">server</a></li><li><a href="global.html#signUp">signUp</a></li><li><a href="global.html#singIn">singIn</a></li><li><a href="global.html#singUp">singUp</a></li><li><a href="global.html#tokenHasExpired">tokenHasExpired</a></li><li><a href="global.html#usernameExists">usernameExists</a></li><li><a href="global.html#validatePassword">validatePassword</a></li><li><a href="global.html#validateUsername">validateUsername</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Jul 22 2018 10:04:50 GMT-0400 (Eastern Daylight Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

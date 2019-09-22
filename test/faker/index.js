@@ -1,0 +1,10 @@
+describe('Start faker tests...', () => {
+  require('./author.faker.test')
+  require('./page.faker.test')
+  require('./story.faker.test')
+  require('./collaboration-invite.faker.test')
+  require('./comment.faker.test')
+  require('./group.faker.test')
+  require('./following.faker.test')
+  require('./activity.faker.test')
+})

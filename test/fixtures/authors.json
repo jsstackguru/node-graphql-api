@@ -1,0 +1,641 @@
+[
+  {
+    "_id": "58eb78b94b432a21008c2346",
+    "id": "58eb78b94b432a21008c2346",
+    "admin": false,
+    "created": "2017-04-10 14:21:13+0200",
+    "updated": "2017-04-10 14:24:09+0200",
+    "active": true,
+    "name": "sasha",
+    "avatar": "http://rekordr.s3.amazonaws.com/profile/58eb78b94b432a21008c2346/165627e0-1de9-11e7-aeb3-d3719b357d20.jpeg",
+    "bio": "Teste testetstets tetstetstetstetstte tetstetstetste tetstetstetstetstetste tetstetste  ttstetstet. Testetstets t",
+    "tooltips": true,
+    "notif": {
+      "collaboration": {
+        "userLeavesStory": true,
+        "removedFromStory": true,
+        "storyUpdates": true,
+        "newCollaborator": true,
+        "invitations": true
+      },
+      "social": {
+        "newFollower": true,
+        "comments": true,
+        "favoritedYourStory": true,
+        "sharedStory": true,
+        "friendStoryUpdates": true,
+        "friendNewStory": true,
+        "newFriend": true
+      }
+    },
+    "firstTime": true,
+    "username": "sasha",
+    "deleted": false,
+    "email": "sasateodorovic57@istoryapp.com",
+    "pushNotif": {
+      "newStoryShare": true,
+      "newStoryPublic": true,
+      "newFollower": true,
+      "newComment": true
+    },
+    "lastActivityCheck": {
+      "collaboration": "2017-05-25 11:36:04+0200",
+      "social": "2017-05-25 15:31:18+0200",
+      "timeline": "2017-05-25 10:52:05+0200"
+    },
+    "lastCommentsCheck": {
+      "collaboration": "2017-05-25 11:36:04+0200",
+      "social": "2017-05-25 15:31:18+0200"
+    },
+    "password": "d6eed32bf5cb8c8d99b6f76ebe408c342d5377c2",
+    "location": {
+      "name": "Novi Sad",
+      "lon": "19.8369444",
+      "lat": "45.2516667"
+    },
+    "token": {
+      "access": "8ug7V79qH4U8soZ7oJ6qhRqaNHFJA2Wt",
+      "auth": "DIu4IAsia3B1r1vPN2vIT8ZPbywkCGGb",
+      "expired": "2022-06-07 10:55:25+0200",
+      "chatAccess": "l9nq51UYJwsV1RBtOESuQeG6VwopLcBH",
+      "refresh": "NAH0HUftmmvc3KL7pJUTWwVFiNlxFlHw"
+    },
+    "plan": {
+      "level": "BASIC",
+      "expires": null
+    },
+    "storage": {
+      "usage": 10240
+    }
+  },
+  {
+    "_id": "58eb78b94b432a21008c2347",
+    "id": "58eb78b94b432a21008c2347",
+    "admin": false,
+    "created": "2017-04-11 14:21:13+0200",
+    "updated": "2017-04-11 14:24:09+0200",
+    "active": true,
+    "name": "Test Author1",
+    "avatar": "",
+    "bio": "Test account #1",
+    "tooltips": true,
+    "notif": {
+      "collaboration": {
+        "userLeavesStory": true,
+        "removedFromStory": true,
+        "storyUpdates": true,
+        "newCollaborator": true,
+        "invitations": true
+      },
+      "social": {
+        "newFollower": true,
+        "comments": true,
+        "favoritedYourStory": true,
+        "sharedStory": true,
+        "friendStoryUpdates": true,
+        "friendNewStory": true,
+        "newFriend": true
+      }
+    },
+    "firstTime": false,
+    "username": "testauthor1",
+    "deleted": false,
+    "email": "testauthor1@istoryapp.com",
+    "pushNotif": {
+      "newStoryShare": true,
+      "newStoryPublic": true,
+      "newFollower": true,
+      "newComment": true
+    },
+    "lastActivityCheck": {
+      "collaboration": "2017-05-25 11:36:04+0200",
+      "social": "2017-05-25 15:31:18+0200",
+      "timeline": "2017-05-25 10:52:05+0200"
+    },
+    "lastCommentsCheck": {
+      "collaboration": "2017-05-25 11:36:04+0200",
+      "social": "2017-05-25 15:31:18+0200"
+    },
+    "password": "d6eed32bf5cb8c8d99b6f76ebe408c342d5377c2",
+    "location": {
+      "name": "",
+      "lon": null,
+      "lat": null
+    },
+    "token": {
+      "access": "9CZqsMEmvO2gRb4Yul65eXLH4XoL4nuW",
+      "auth": "kTM7v5EhwJrsMcaXVUDN9oJvhl4vTQKo",
+      "expired": "2018-06-07 10:55:25+0200",
+      "chatAccess": "l9nq51UYJwsV1RBtOESuQeG6VwopLcBH",
+      "refresh": "NAH0HUftmmvc3KL7pJUTWwVFiNlxFlHZ"
+    },
+    "plan": {
+      "level": "BASIC",
+      "expires": null
+    },
+    "storage": {
+      "usage": 10240
+    }
+  },
+  {
+    "_id": "58eb78b94b432a21008c2348",
+    "id": "58eb78b94b432a21008c2348",
+    "admin": false,
+    "created": "2017-04-11 14:21:13+0200",
+    "updated": "2017-04-11 14:24:09+0200",
+    "active": true,
+    "name": "Test Author2",
+    "avatar": "",
+    "bio": "Test account #2",
+    "tooltips": true,
+    "notif": {
+      "collaboration": {
+        "userLeavesStory": true,
+        "removedFromStory": true,
+        "storyUpdates": true,
+        "newCollaborator": true,
+        "invitations": true
+      },
+      "social": {
+        "newFollower": true,
+        "comments": true,
+        "favoritedYourStory": true,
+        "sharedStory": true,
+        "friendStoryUpdates": true,
+        "friendNewStory": true,
+        "newFriend": true
+      }
+    },
+    "firstTime": false,
+    "username": "testauthor2",
+    "deleted": false,
+    "email": "testauthor2@istoryapp.com",
+    "pushNotif": {
+      "newStoryShare": true,
+      "newStoryPublic": true,
+      "newFollower": true,
+      "newComment": true
+    },
+    "lastActivityCheck": {
+      "collaboration": "2017-05-25 11:36:04+0200",
+      "social": "2017-05-25 15:31:18+0200",
+      "timeline": "2017-05-25 10:52:05+0200"
+    },
+    "lastCommentsCheck": {
+      "collaboration": "2017-05-25 11:36:04+0200",
+      "social": "2017-05-25 15:31:18+0200"
+    },
+    "password": "d6eed32bf5cb8c8d99b6f76ebe408c342d5377c2",
+    "location": {
+      "name": "",
+      "lon": null,
+      "lat": null
+    },
+    "token": {
+      "access": "9CZqsMEmvO2gRb4Yul65eXLH4XoL4nuA",
+      "auth": "kTM7v5EhwJrsMcaXVUDN9oJvhl4vTQKp",
+      "expired": "2018-06-07 10:55:25+0200",
+      "refresh": "NAH0HUftmmvc3KL7pJUTWwVFiNlxFlHb"
+    },
+    "plan": {
+      "level": "BASIC",
+      "expires": null
+    },
+    "storage": {
+      "usage": 513000
+    }
+  },
+  {
+    "_id": "5a538361ea64260e00eb7546",
+    "id": "5a538361ea64260e00eb7546",
+    "admin": false,
+    "created": "2018-01-08T14:42:41.915Z",
+    "updated": "2018-01-08T14:42:41.915Z",
+    "active": true,
+    "name": "nikola",
+    "avatar": null,
+    "bio": "",
+    "tooltips": true,
+    "notif": {
+      "collaboration": {
+        "userLeavesStory": true,
+        "removedFromStory": true,
+        "storyUpdates": true,
+        "newCollaborator": true,
+        "invitations": true
+      },
+      "social": {
+        "newFollower": true,
+        "comments": true,
+        "favoritedYourStory": true,
+        "sharedStory": true,
+        "friendStoryUpdates": true,
+        "friendNewStory": true,
+        "newFriend": true
+      }
+    },
+    "firstTime": true,
+    "username": "nikola",
+    "deleted": false,
+    "email": "nidzoliki@istoryapp.com",
+    "pushNotif": {
+      "newStoryShare": true,
+      "newStoryPublic": true,
+      "newFollower": true,
+      "newComment": true
+    },
+    "lastActivityCheck": {
+      "collaboration": "2018-08-20T11:35:33.232Z",
+      "social": "2018-08-29T11:06:30.605Z",
+      "timeline": "2018-08-20T11:38:08.406Z"
+    },
+    "lastCommentsCheck": {
+      "collaboration": "2017-05-25 11:36:04+0200",
+      "social": "2017-05-25 15:31:18+0200"
+    },
+    "password": "eca3e20e67119f409b4ded2edf5d06d6bac68800",
+    "updatedAt": "2018-01-08T14:43:05.317Z",
+    "location": {
+      "name": "",
+      "lon": null,
+      "lat": null
+    },
+    "token": {
+      "access": "x0zuO7P2n6Unt0DGzgxoo00BR37nr2Kn",
+      "auth": "JHxZXQ5lL8IhkTttTeBf2JDSjyYS7NKV",
+      "expired": "2018-09-13T09:29:16.806Z",
+      "chatAccess": "8KG7lChcC2VYh9M4EB679NrnoXK8CgBO",
+      "refresh": "KGtdi1fibRTHiobPxu4eqZPcYbA63pyL"
+    },
+    "plan": {
+      "level": "BASIC",
+      "expires": null
+    },
+    "storage": {
+      "usage": 10240
+    }
+  },
+  {
+    "_id": "5a538361ea64260e00eb7547",
+    "id": "5a538361ea64260e00eb7547",
+    "admin": false,
+    "created": "2018-01-08T14:42:41.915Z",
+    "updated": "2018-01-08T14:42:41.915Z",
+    "active": true,
+    "name": "Group Member 1",
+    "avatar": null,
+    "bio": "",
+    "tooltips": true,
+    "notif": {
+      "collaboration": {
+        "userLeavesStory": true,
+        "removedFromStory": true,
+        "storyUpdates": true,
+        "newCollaborator": true,
+        "invitations": true
+      },
+      "social": {
+        "newFollower": true,
+        "comments": true,
+        "favoritedYourStory": true,
+        "sharedStory": true,
+        "friendStoryUpdates": true,
+        "friendNewStory": true,
+        "newFriend": true
+      }
+    },
+    "firstTime": true,
+    "username": "group1",
+    "deleted": false,
+    "email": "group1@istoryapp.com",
+    "pushNotif": {
+      "newStoryShare": true,
+      "newStoryPublic": true,
+      "newFollower": true,
+      "newComment": true
+    },
+    "lastActivityCheck": {
+      "collaboration": "2018-11-20T11:35:33.232Z",
+      "social": "2018-11-29T11:06:30.605Z",
+      "timeline": "2018-11-20T11:38:08.406Z"
+    },
+    "lastCommentsCheck": {
+      "collaboration": "2018-11-25 11:36:04+0200",
+      "social": "2018-11-25 15:31:18+0200"
+    },
+    "password": "eca3e20e67119f409b4ded2edf5d06d6bac68800",
+    "updatedAt": "2018-11-08T14:43:05.317Z",
+    "location": {
+      "name": "",
+      "lon": null,
+      "lat": null
+    },
+    "token": {
+      "access": "x0zuO7P2n6Unt0DGzgxoo00BR37nr2K7",
+      "auth": "JHxZXQ5lL8IhkTttTeBf2JDSjyYS7NKa",
+      "expired": "2018-12-31T09:29:16.806Z",
+      "chatAccess": "8KG7lChcC2VYh9M4EB679NrnoXK8CgBw",
+      "refresh": "KGtdi1fibRTHiobPxu4eqZPcYbA63pyE"
+    },
+    "plan": {
+      "level": "BASIC",
+      "expires": null
+    },
+    "storage": {
+      "usage": 10240
+    }
+  },
+  {
+    "_id": "5a538361ea64260e00eb7548",
+    "id": "5a538361ea64260e00eb7548",
+    "admin": false,
+    "created": "2018-01-08T14:42:41.915Z",
+    "updated": "2018-01-08T14:42:41.915Z",
+    "active": true,
+    "name": "Group Member 2",
+    "avatar": null,
+    "bio": "",
+    "tooltips": true,
+    "notif": {
+      "collaboration": {
+        "userLeavesStory": true,
+        "removedFromStory": true,
+        "storyUpdates": true,
+        "newCollaborator": true,
+        "invitations": true
+      },
+      "social": {
+        "newFollower": true,
+        "comments": true,
+        "favoritedYourStory": true,
+        "sharedStory": true,
+        "friendStoryUpdates": true,
+        "friendNewStory": true,
+        "newFriend": true
+      }
+    },
+    "firstTime": true,
+    "username": "group2",
+    "deleted": false,
+    "email": "group2@istoryapp.com",
+    "pushNotif": {
+      "newStoryShare": true,
+      "newStoryPublic": true,
+      "newFollower": true,
+      "newComment": true
+    },
+    "lastActivityCheck": {
+      "collaboration": "2018-11-20T11:35:33.232Z",
+      "social": "2018-11-29T11:06:30.605Z",
+      "timeline": "2018-11-20T11:38:08.406Z"
+    },
+    "lastCommentsCheck": {
+      "collaboration": "2018-11-25 11:36:04+0200",
+      "social": "2018-11-25 15:31:18+0200"
+    },
+    "password": "eca3e20e67119f409b4ded2edf5d06d6bac68800",
+    "updatedAt": "2018-11-08T14:43:05.317Z",
+    "location": {
+      "name": "",
+      "lon": null,
+      "lat": null
+    },
+    "token": {
+      "access": "x0zuO7P2n6Unt0DGzgxoo00sR37nr2K7",
+      "auth": "JHxZXQ5lL8IhkTt3TeBf2JDSjyYS7NKa",
+      "expired": "2018-12-31T09:29:16.806Z",
+      "chatAccess": "8KG7lChcC2vYh9M4EB679NrnoXK8CgBw",
+      "refresh": "KGtdi1fibRT3HiobPxu4eqZPcYbA63pyE"
+    },
+    "plan": {
+      "level": "BASIC",
+      "expires": null
+    },
+    "storage": {
+      "usage": 10240
+    }
+  },
+  {
+    "_id": "5a538361ea64260e00eb7549",
+    "id": "5a538361ea64260e00eb7549",
+    "admin": false,
+    "created": "2018-01-08T14:42:41.915Z",
+    "updated": "2018-01-08T14:42:41.915Z",
+    "active": true,
+    "name": "Group Member 3",
+    "avatar": null,
+    "bio": "",
+    "tooltips": true,
+    "notif": {
+      "collaboration": {
+        "userLeavesStory": true,
+        "removedFromStory": true,
+        "storyUpdates": true,
+        "newCollaborator": true,
+        "invitations": true
+      },
+      "social": {
+        "newFollower": true,
+        "comments": true,
+        "favoritedYourStory": true,
+        "sharedStory": true,
+        "friendStoryUpdates": true,
+        "friendNewStory": true,
+        "newFriend": true
+      }
+    },
+    "firstTime": true,
+    "username": "group3",
+    "deleted": false,
+    "email": "group3@istoryapp.com",
+    "pushNotif": {
+      "newStoryShare": true,
+      "newStoryPublic": true,
+      "newFollower": true,
+      "newComment": true
+    },
+    "lastActivityCheck": {
+      "collaboration": "2018-11-20T11:35:33.232Z",
+      "social": "2018-11-29T11:06:30.605Z",
+      "timeline": "2018-11-20T11:38:08.406Z"
+    },
+    "lastCommentsCheck": {
+      "collaboration": "2018-11-25 11:36:04+0200",
+      "social": "2018-11-25 15:31:18+0200"
+    },
+    "password": "eca3e20e67119f409b4ded2edf5d06d6bac68800",
+    "updatedAt": "2018-11-08T14:43:05.317Z",
+    "location": {
+      "name": "",
+      "lon": null,
+      "lat": null
+    },
+    "token": {
+      "access": "x0zuO7Prn6Unt0DGzgxoo00sR37nr2K7",
+      "auth": "JHxZXQ5lL8IhkT63TeBf2JDSjyYS7NKa",
+      "expired": "2018-12-31T09:29:16.806Z",
+      "chatAccess": "8KG7lChcC2vYh9M4EB679NrnoXK8CgBw",
+      "refresh": "KGtdiPfibRT3HiobPxu4eqZPcYbA63pyE"
+    },
+    "plan": {
+      "level": "STANDARD",
+      "expires": null
+    },
+    "storage": {
+      "usage": 300940
+    }
+  },
+  {
+    "_id": "5a538361ea64260e00eb7550",
+    "id": "5a538361ea64260e00eb7550",
+    "admin": false,
+    "created": "2018-01-08T14:42:41.915Z",
+    "updated": "2018-01-08T14:42:41.915Z",
+    "active": true,
+    "name": "Group Member 4",
+    "avatar": null,
+    "bio": "",
+    "tooltips": true,
+    "notif": {
+      "collaboration": {
+        "userLeavesStory": true,
+        "removedFromStory": true,
+        "storyUpdates": true,
+        "newCollaborator": true,
+        "invitations": true
+      },
+      "social": {
+        "newFollower": true,
+        "comments": true,
+        "favoritedYourStory": true,
+        "sharedStory": true,
+        "friendStoryUpdates": true,
+        "friendNewStory": true,
+        "newFriend": true
+      }
+    },
+    "firstTime": true,
+    "username": "group4",
+    "deleted": false,
+    "email": "group4@istoryapp.com",
+    "pushNotif": {
+      "newStoryShare": true,
+      "newStoryPublic": true,
+      "newFollower": true,
+      "newComment": true
+    },
+    "lastActivityCheck": {
+      "collaboration": "2018-11-20T11:35:33.232Z",
+      "social": "2018-11-29T11:06:30.605Z",
+      "timeline": "2018-11-20T11:38:08.406Z"
+    },
+    "lastCommentsCheck": {
+      "collaboration": "2018-11-25 11:36:04+0200",
+      "social": "2018-11-25 15:31:18+0200"
+    },
+    "password": "eca3e20e67119f409b4ded2edf5d06d6bac68800",
+    "updatedAt": "2018-11-08T14:43:05.317Z",
+    "location": {
+      "name": "",
+      "lon": null,
+      "lat": null
+    },
+    "token": {
+      "access": "x0zuO7Prn6Unt0DGzg8oo00sR37nr2K7",
+      "auth": "JHxZXQ5lL8IhkTv3TeBf2JDSjyYS7NKa",
+      "expired": "2018-12-31T09:29:16.806Z",
+      "chatAccess": "8KG7lChcC2vYh9MmEB679NrnoXK8CgBw",
+      "refresh": "KGtdiPfibRT3HiobPxu4eqZP2YbA63pyE"
+    },
+    "plan": {
+      "level": "PREMIUM",
+      "expires": null
+    },
+    "storage": {
+      "usage": 5780940
+    }
+  },
+  {
+    "_id": "5a7d7373231b6b0e008fd2a6",
+    "id": "5a7d7373231b6b0e008fd2a6",
+    "admin": false,
+    "google": null,
+    "facebook": null,
+    "twitter": null,
+    "created": "2018-02-09T10:09:55.470Z",
+    "updated": "2018-02-09T10:09:55.470Z",
+    "active": true,
+    "name": "sajko",
+    "avatar": "http://rekordr.s3.amazonaws.com/profile/5a7d7373231b6b0e008fd2a6/2027a690-1177-11e8-9b8f-2d27e840e389.jpeg",
+    "bio": "",
+    "tooltips": true,
+    "blogs": {
+      "wp": "",
+      "tumbler": "",
+      "blogger": ""
+    },
+    "notif": {
+      "collaboration": {
+        "userLeavesStory": true,
+        "removedFromStory": true,
+        "storyUpdates": true,
+        "newCollaborator": true,
+        "invitations": true
+      },
+      "social": {
+        "newFollower": true,
+        "comments": true,
+        "favoritedYourStory": true,
+        "sharedStory": true,
+        "friendStoryUpdates": true,
+        "friendNewStory": true,
+        "newFriend": true
+      }
+    },
+    "firstTime": true,
+    "username": "sajko",
+    "deleted": false,
+    "email": "manualtester79@gmail.com",
+    "pushNotif": {
+      "newStoryShare": true,
+      "newStoryPublic": true,
+      "newFollower": true,
+      "newComment": true
+    },
+    "lastActivityCheck": {
+      "collaboration": "2018-05-24T12:03:43.234Z",
+      "social": "2018-05-24T12:03:32.263Z",
+      "timeline": "2018-05-24T12:03:47.448Z"
+    },
+    "lastCommentsCheck": {
+      "collaboration": "2017-05-25 11:36:04+0200",
+      "social": "2017-05-25 15:31:18+0200"
+    },
+    "password": "ab4d8d2a5f480a137067da17100271cd176607a1",
+    "accessToken": "Viy6KyOCCVyuWUAaDnQmwyCFuB7SsOm8",
+    "authToken": "Lv550NToKrTT7NFuaK61GCZ68wXcIClq",
+    "updatedAt": "2018-02-09T10:13:59.382Z",
+    "tokenExpired": "2018-06-23T11:56:25.898Z",
+    "chatAccessToken": "DN2qGufAVFKohTN3mx1NN5mzbNGK6KXZ",
+    "refreshToken": "q4R6LJW3iWIE5t8b68nLQrzrzrzVdu1A",
+    "location": {
+      "name": "Ulica Svetozara Ćorovića",
+      "lon": "19.80300021763217",
+      "lat": "45.25124693792889"
+    },
+    "token": {
+      "access": "x0zuO7Prn6Unt0DGzg8oo00sR37nr2K8",
+      "auth": "JHxZXQ5lL8IhkTv3TeBf2JDSjyYS7NKb",
+      "expired": "2018-12-31T09:29:17.806Z",
+      "chatAccess": "8KG7lChcC2vYh9MmEB679NrnoXK8CgBx",
+      "refresh": "KGtdiPfibRT3HiobPxu4eqZP2YbA63pyF"
+    },
+    "plan": {
+      "level": "PREMIUM",
+      "expires": null
+    },
+    "storage": {
+      "usage": 5780940
+    }
+  }
+]

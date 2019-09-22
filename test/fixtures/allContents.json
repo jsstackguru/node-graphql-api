@@ -1,0 +1,160 @@
+{
+  "gallery": {
+    "place": {
+      "addr": "Bulevar vojvode Stepe 67–79, 21137 Central Serbia, Serbia",
+      "name": "Bulevar vojvode Stepe 67–79",
+      "lon": "19.79646931633115",
+      "lat": "45.25499341274412"
+    },
+    "caption": "test",
+    "sections": [{
+      "id": "de979491-6efc-11e8-a429-b93cd4117d9d",
+      "images": [{
+          "size": 231335,
+          "id": "de96f850-6efc-11e8-a429-b93cd4117d9d",
+          "thumb2": "http://rekordr.s3.amazonaws.com/images/5b20ffd1f8e4a20e006a1b42/de95e6e2-6efc-11e8-a429-b93cd4117d9d_thumb2.jpeg",
+          "thumb": "http://rekordr.s3.amazonaws.com/images/5b20ffd1f8e4a20e006a1b42/de95e6e1-6efc-11e8-a429-b93cd4117d9d_thumb.jpeg",
+          "image": "http://rekordr.s3.amazonaws.com/images/5b20ffd1f8e4a20e006a1b42/de95e6e0-6efc-11e8-a429-b93cd4117d9d.jpeg"
+        },
+        {
+          "size": 200865,
+          "id": "de979490-6efc-11e8-a429-b93cd4117d9d",
+          "thumb2": "http://rekordr.s3.amazonaws.com/images/5b20ffd1f8e4a20e006a1b42/de96f853-6efc-11e8-a429-b93cd4117d9d_thumb2.jpeg",
+          "thumb": "http://rekordr.s3.amazonaws.com/images/5b20ffd1f8e4a20e006a1b42/de96f852-6efc-11e8-a429-b93cd4117d9d_thumb.jpeg",
+          "image": "http://rekordr.s3.amazonaws.com/images/5b20ffd1f8e4a20e006a1b42/de96f851-6efc-11e8-a429-b93cd4117d9d.jpeg"
+        }
+      ],
+      "position": "0",
+      "itemProportionHeight": "195",
+      "itemProportionWidth": "195"
+    }],
+    "date": "2018-06-13T11:26:53.873Z",
+    "matchId": "x-coredata:///RECoreDataContentGallery/tF5DF6308-82B7-4830-A7B9-3217902AE3C87",
+    "updated": "2018-06-13T11:28:17.997Z",
+    "created": "2018-06-13T11:28:17.997Z",
+    "contentId": "de95bfd0-6efc-11e8-a429-b93cd4117d9d",
+    "url": null,
+    "type": "gallery"
+  },
+  "video": {
+    "height": 368,
+    "width": 640,
+    "duration": {
+      "seconds": 6,
+      "raw": "00:00:06.70"
+    },
+    "size": 5587857,
+    "video": null,
+    "videoId": null,
+    "place": {
+      "addr": null,
+      "name": null,
+      "lon": null,
+      "lat": null
+    },
+    "date": null,
+    "matchId": "x-coredata:///RECoreDataContentVideo/t453698AB-C97F-4F25-8287-70F1350552EB90",
+    "updated": "2018-06-24T16:26:49.182Z",
+    "created": "2018-06-24T16:26:49.182Z",
+    "caption": null,
+    "contentId": "6506efe0-77cb-11e8-bb5c-8916d2ea67cd",
+    "rtmp": "rtmp://s22evx7jej0vhx.cloudfront.net/5b20ffd1f8e4a20e006a1b42/650df4c0-77cb-11e8-bb5c-8916d2ea67cd.mov",
+    "image": "http://rekordr-videos.s3.amazonaws.com/images/5b20ffd1f8e4a20e006a1b42/654e8030-77cb-11e8-bb5c-8916d2ea67cd.jpg",
+    "url": "http://rekordr-videos.s3.amazonaws.com/5b20ffd1f8e4a20e006a1b42/650df4c0-77cb-11e8-bb5c-8916d2ea67cd.mov",
+    "type": "video"
+  },
+  "image": {
+    "caption": null,
+    "date": null,
+    "matchId": "x-coredata:///RECoreDataContentImage/t453698AB-C97F-4F25-8287-70F1350552EB95",
+    "place": {
+      "addr": null,
+      "name": null,
+      "lon": "0",
+      "lat": "0"
+    },
+    "updated": "2018-06-24T16:28:30.965Z",
+    "created": "2018-06-24T16:28:30.965Z",
+    "thumb2": {
+      "height": 852,
+      "width": 640,
+      "url": "http://rekordr.s3.amazonaws.com/images/5b20ffd1f8e4a20e006a1b42/65108cd2-77cb-11e8-bb5c-8916d2ea67cd_thumb_2.image"
+    },
+    "thumb": {
+      "height": 1278,
+      "width": 960,
+      "url": "http://rekordr.s3.amazonaws.com/images/5b20ffd1f8e4a20e006a1b42/65108cd1-77cb-11e8-bb5c-8916d2ea67cd_thumb.image"
+    },
+    "image": {
+      "height": 852,
+      "width": 640,
+      "url": "http://rekordr.s3.amazonaws.com/images/5b20ffd1f8e4a20e006a1b42/65108cd0-77cb-11e8-bb5c-8916d2ea67cd.image"
+    },
+    "url": null,
+    "contentId": "6506efe1-77cb-11e8-bb5c-8916d2ea67cd",
+    "type": "image"
+  },
+  "audio": {
+    "size": null,
+    "duration": 229,
+    "image": null,
+    "place": {
+      "addr": null,
+      "name": null,
+      "lon": "0",
+      "lat": "0"
+    },
+    "date": null,
+    "matchId": "x-coredata:///RECoreDataContentAudio/tFEA964CA-4CEC-4960-9887-779640EA32D446",
+    "updated": "2018-06-08T13:27:34.786Z",
+    "created": "2018-06-08T13:27:34.786Z",
+    "title": "Rolling Stones - Brown Sugar",
+    "caption": "Rolling Stones - Brown Sugar",
+    "contentId": "9e78df82-6b1f-11e8-8af0-6b7839e63c8f",
+    "url": "http://rekordr.s3.amazonaws.com/audios/5b20ffd1f8e4a20e006a1b42/9e78df83-6b1f-11e8-8af0-6b7839e63c8f.m4a",
+    "type": "audio"
+  },
+  "gif": {
+    "height": 1280,
+    "width": 1280,
+    "duration": {
+      "seconds": 3,
+      "raw": "00:00:03.00"
+    },
+    "size": 133946,
+    "rtmp": "rtmp://s22evx7jej0vhx.cloudfront.net/5b20ffd1f8e4a20e006a1b42/de380600-6af7-11e8-8af0-6b7839e63c8f.mov",
+    "place": {
+      "addr": null,
+      "name": null,
+      "lon": "0",
+      "lat": "0"
+    },
+    "date": null,
+    "image": "http://rekordr-videos.s3.amazonaws.com/images/5b20ffd1f8e4a20e006a1b42/de5c7df0-6af7-11e8-8af0-6b7839e63c8f.jpg",
+    "matchId": "x-coredata:///RECoreDataContentGif/tAD53F219-DC60-4F77-9484-E43AD0777F2C16",
+    "updated": "2018-06-08T08:42:25.237Z",
+    "created": "2018-06-08T08:42:25.237Z",
+    "caption": "gif caption",
+    "contentId": "da21ba73-6af7-11e8-8af0-6b7839e63c8f",
+    "url": "http://rekordr-videos.s3.amazonaws.com/5b20ffd1f8e4a20e006a1b42/de380600-6af7-11e8-8af0-6b7839e63c8f.mov",
+    "type": "gif"
+  },
+  "recording": {
+    "date": null,
+    "title": null,
+    "duration": 2.020136,
+    "place": {
+      "addr": null,
+      "name": null,
+      "lon": null,
+      "lat": null
+    },
+    "type": "recording",
+    "caption": null,
+    "matchId": "x-coredata:///RECoreDataContentRecording/tFEA964CA-4CEC-4960-9887-779640EA32D410",
+    "contentId": "3ce470e0-6b06-11e8-8af0-6b7839e63c8f",
+    "updated": "2018-07-05T19:55:47.374Z",
+    "created": "2018-07-05T19:55:47.374Z",
+    "url": "http://rekordr.s3.amazonaws.com/recordings/5b20ffd1f8e4a20e006a1b42/3ce470e1-6b06-11e8-8af0-6b7839e63c8f.m4a"
+  }
+}

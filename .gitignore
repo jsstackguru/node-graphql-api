@@ -1,0 +1,23 @@
+node_modules
+.DS_Store
+*.dist
+!config.js.dist
+config.js
+.vscode/
+.history/
+.idea/
+!.env.dist
+.env
+test/_coverage
+.nyc_output
+src/...
+src/services/...
+file
+exports
+test/media/buckets/
+dist
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+!src/migrations/config.js

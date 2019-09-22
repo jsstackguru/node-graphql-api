@@ -1,0 +1,18 @@
+image: node:10.0.0
+
+pipelines:
+  default:
+    - step:
+        caches:
+          - node
+        script:
+          - cp ./config.js.dist ./config.js
+          - cp ./.env.dist ./.env
+          - npm install
+          - npm run test:build
+        services:
+          - mongo
+definitions:
+  services:
+    mongo:
+      image: mongo

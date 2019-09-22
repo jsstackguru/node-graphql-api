@@ -1,0 +1,35 @@
+{
+  "data": {
+    "accountStatus": {
+      "id": "5349b4ddd2781d08c09890f4",
+      "members": [{
+          "name": "Test Author1",
+          "storage": {
+            "usage": 10240
+          },
+          "plan": {
+            "level": "BASIC"
+          }
+        },
+        {
+          "name": "Test Author2",
+          "storage": {
+            "usage": 513000
+          },
+          "plan": {
+            "level": "BASIC"
+          }
+        }
+      ],
+      "isOwner": "true",
+      "pending": [
+        {
+          "author": {
+            "name": "nikola"
+          },
+          "email": "nidzoliki@istoryapp.com"
+        }
+      ]
+    }
+  }
+}

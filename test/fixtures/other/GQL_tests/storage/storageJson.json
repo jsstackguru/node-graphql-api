@@ -1,0 +1,38 @@
+{
+  "data": {
+    "storageJson": {
+      "author": {
+        "total": {
+          "bytes": 512000,
+          "format": "500 KB"
+        },
+        "used": {
+          "bytes": 10240,
+          "format": "10 KB"
+        },
+        "left": {
+          "bytes": 501760,
+          "format": "490 KB"
+        }
+      },
+      "members": {
+        "you": {
+          "bytes": 10240,
+          "format": "10 KB"
+        },
+        "others": {
+          "bytes": 523240,
+          "format": "510.98 KB"
+        },
+        "left": {
+          "bytes": 1002520,
+          "format": "979.02 KB"
+        },
+        "total": {
+          "bytes": 1536000,
+          "format": "1.46 MB"
+        }
+      }
+    }
+  }
+}

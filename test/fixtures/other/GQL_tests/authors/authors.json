@@ -1,0 +1,46 @@
+{
+  "data": {
+    "authors": {
+      "docs": [{
+        "name": "sasha",
+        "email": "sasateodorovic57@istoryapp.com",
+        "following": {
+          "docs": [{
+            "name": "Test Author1"
+          }],
+          "total": 1
+        },
+        "location": {
+          "name": "Novi Sad",
+          "lon": "19.8369444",
+          "lat": "45.2516667"
+        },
+        "notif": {
+          "collaboration": {
+            "invitations": "true"
+          }
+        }
+      }, {
+        "name": "sajko",
+        "email": "manualtester79@gmail.com",
+        "following": {
+          "docs": [{
+            "name": "sasha"
+          }],
+          "total": 1
+        },
+        "location": {
+          "name": "Ulica Svetozara Ćorovića",
+          "lon": "19.80300021763217",
+          "lat": "45.25124693792889"
+        },
+        "notif": {
+          "collaboration": {
+            "invitations": "true"
+          }
+        }
+      }],
+      "total": 2
+    }
+  }
+}

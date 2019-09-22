@@ -1,0 +1,28 @@
+{
+  "data": {
+    "comments": {
+      "docs": [{
+        "text": "komentar 1",
+        "id": "5b29f711d216c70e00c357b7",
+        "deleted": "false",
+        "author": {
+          "name": "sasha"
+        }
+      }, {
+        "text": "komentar 2",
+        "id": "58eb78b94b432a21008c2348",
+        "deleted": "false",
+        "author": {
+          "name": "nikola"
+        }
+      }, {
+        "text": "komentar 5",
+        "id": "5b2a47b2d216c70e00c357d2",
+        "deleted": "false",
+        "author": {
+          "name": "Test Author1"
+        }
+      }]
+    }
+  }
+}

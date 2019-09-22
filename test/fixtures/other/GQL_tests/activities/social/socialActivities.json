@@ -1,0 +1,36 @@
+{
+  "data": {
+    "activitySocial": {
+      "docs": [{
+        "author": null,
+        "story": null,
+        "message": "test message",
+        "type": "system_message"
+      }, {
+        "author": null,
+        "story": null,
+        "message": "test message 123",
+        "type": "system_message"
+      }, {
+        "author": {
+          "name": "sasha"
+        },
+        "story": {
+          "title": "Story #1"
+        },
+        "message": null,
+        "type": "story_updated"
+      }, {
+        "author": {
+          "name": "sasha"
+        },
+        "story": {
+          "title": "Story #1"
+        },
+        "message": null,
+        "type": "story_created"
+      }],
+      "total": 4
+    }
+  }
+}

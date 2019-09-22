@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: handles/author.handles.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: handles/author.handles.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @file Controller for author collection
+ * @author Andrey Ponomarov &lt;andrey.ponom1222@gmail.com>
+ * @version 1.0
+ */
+
+const mongoose = require('mongoose')
+
+const randtoken = require('rand-token')
+const _ = require('underscore')
+const restify = require('restify')
+// Models
+const Author = mongoose.model('authors')
+const ForgotPassword = mongoose.model('forgotpasswords')
+// Extractors
+const authorExtractor = require('../models/author/author.extractor')
+// Handles
+const utils = require('../lib/utils')
+// Services
+const log = require('../services/log').log
+
+/**
+ * Authorize user by token
+ *
+ * @param {string} token Access token for user
+ * @returns {Object} Return author fond by access token
+ */
+exports.authorize = async (token) => {
+  try {
+
+    // find author by token
+    const author = await Author.findOne({'accessToken': token, 'active': true, 'deleted': false}).exec()
+
+    return authorExtractor.basic(author)
+
+  } catch (err) {
+    log.error(err.stack)
+    return err
+  }
+}
+
+/**
+ * Get all authors
+ *
+ * @return {Array} Array of authors from collection `authors`
+ */
+exports.all = async () => {
+  return []
+}
+
+/**
+ * Create author
+ *
+ * @param {Object} user Author's data to be stored
+ * @returns {Object} New created author
+ */
+exports.create = async (user) => {
+  try {
+    // create author
+    const newUser = await Author.create(user)
+
+    return newUser
+  } catch (err) {
+    log.error(err.stack)
+    return err
+  }
+}
+
+/**
+ * Get author basic data by id
+ */
+exports.getById = async (id) => {
+  try {
+    let author = await Author.findOne({'_id': id, active: true, deleted: false}).exec()
+
+    return authorExtractor.basic(author)
+
+  } catch (err) {
+    log.error(err.stack)
+    return err
+  }
+}
+
+/**
+ * Login author by email and password
+ *
+ * @param {String} email email
+ * @param {String} password password
+ * @returns {Object} user's data
+ */
+exports.login = async (email, password) => {
+  try {
+    password = utils.generatePassword(password)
+    // find author
+    let user = await Author.findOne({email: email, password: password, active: true, deleted: false}).exec()
+
+    if (!user) {
+      return null
+    }
+    let update = {}
+
+    // generate refresh token
+    if (!user.refreshToken) {
+      update.refreshToken = randtoken.generate(32)
+    }
+
+    // check if token has expired
+    if (tokenHasExpired(user.tokenExpired)) {
+      const token = randtoken.generate(32)
+      const now = new Date()
+      const expireDate = now.setDate(now.getDate() + 30)
+      update.accessToken = token
+      update.tokenExpired = expireDate
+      update.chatAccessToken = randtoken.generate(32)
+    }
+    // update author
+    if (!_.isEmpty(update)) {
+      await Author.updateOne({_id: user.id}, update)
+    }
+
+    return authorExtractor.login(user)
+
+  } catch (err) {
+    log.error(err.stack)
+    return err
+  }
+}
+
+/**
+  * Check does token has expired
+ *
+  * @param {Date} createDate
+  * @returns {Boolean}
+  */
+const tokenHasExpired = (expiredDate) => {
+  if (!expiredDate) {
+    return true
+  } else {
+    var now = new Date()
+    return now > new Date(expiredDate)
+  }
+}
+
+exports.tokenHasExpired = tokenHasExpired
+
+/**
+ * Signup new author
+ *
+ * @param {String} email Email for new user
+ * @param {String} username Username for new user
+ * @param {String} name Name for new author
+ */
+exports.signUp = async (email, username, password, name) => {
+  try {
+    // generate auth token
+    const token = randtoken.generate(32)
+
+    // check username
+    let usernameUser = await Author.findByUsername(username)
+
+    if (usernameUser) {
+      log.error('findByUsername', username)
+      // throw new restify.errors.UnprocessableEntityError('Username already taken')
+      return new restify.errors.UnprocessableEntityError('Username already taken')
+      // return Promise.reject('Username already taken')
+    }
+
+    // chech email
+    let user = await Author.findActiveByEmail(email)
+
+    if (user) {
+      // throw new restify.errors.UnprocessableEntityError('Email already taken')
+      throw new Error('Email already taken')
+    }
+
+    // create author
+    let newAuthor = await Author.create({
+      email: email,
+      username: username,
+      password: utils.generatePassword(password),
+      name: name || username,
+      accessToken: randtoken.generate(32),
+      tokenCreated: new Date(),
+      created: new Date(),
+      updated: new Date(),
+      authToken: token,
+      deleted: false,
+      active: false,
+      admin: false,
+      notif: {
+        collaboration: {
+          userLeavesJournal: true,
+          removedFromJournal: true,
+          journalUpdates: true,
+          newCollaborator: true,
+          invitations: true
+        },
+        social: {
+          newFollower: true,
+          comments: true,
+          favoritedYourJournal: true,
+          sharedJournal: true,
+          friendJournalUpdates: true,
+          friendNewJournal: true,
+          newFriend: true
+        }
+      },
+      firstTime: true,
+      pushNotif: {
+        newJournalShare: true,
+        newJournalPublic: true,
+        newFollower: true,
+        newComment: true
+      },
+      lastActivityCheck: {
+        timeline: new Date(),
+        social: new Date(),
+        collaboration: new Date()
+      }
+    })
+
+    return authorExtractor.newAuthor(newAuthor)
+
+  } catch (err) {
+    log.error(err.stack)
+    return err
+  }
+}
+
+/**
+ * Forgot password
+ *
+ * @param {String} email Author's email for recovery link in email
+ */
+exports.forgotPassword = async (email) => {
+  try {
+    let author = await Author.findActiveByEmail(email)
+
+    if (!author) {
+      return new restify.errors.UnprocessableEntityError('Author not found')
+    }
+
+    // generate access code
+    const code = utils.emailValidationCode(email)
+    // save forgot password
+    const insertValues = {
+      userId: author.id,
+      code: code,
+      active: true,
+      created: new Date()
+    }
+    let forgot = await ForgotPassword.create(insertValues)
+
+    return {
+      author: authorExtractor.basic(author),
+      code: forgot.code
+    }
+  } catch (err) {
+    log.error(err.stack)
+    return err
+  }
+}
+
+/**
+ * Check does username exists
+ *
+ * @param {String} username Username to find in database
+ * @returns {Promise}
+ */
+exports.usernameExists = async (username) => {
+  try {
+    let author = await Author.findByUsername(username)
+      
+    if (author) {
+      return true
+    } else {
+      return false
+    }
+  } catch (err) {
+    log.error(err.stack)
+    return err
+  }
+}
+
+/**
+ * Check does email exists
+ *
+ * @param {String} email Email to find in database
+ * @returns {Promise}
+ */
+exports.emailExists = async (email) => {
+  try {
+    let author = await Author.findActiveByEmail(email)
+
+    if (author) {
+      return true
+    } else {
+      return false
+    }
+  } catch (err) {
+    log.error(err)
+    return err
+  }
+}
+
+/**
+ * Search authors by term and page
+ *
+ * @param {String} term Term for searching by username and name
+ * @returns {Promise} Return array of authors as search results
+ */
+exports.search = async (term) => {
+  try {
+    let searchQuery = {}
+
+    if (term) {
+      searchQuery = {
+        $and: [
+          {
+            $or: [
+              {name: {$regex: term, $options: 'i'}},
+              {username: {$regex: term, $options: 'i'}}
+            ]
+          },
+          {deleted: false}
+        ]
+      }
+    } else {
+      searchQuery = {deleted: false}
+    }
+
+    // get authors by page
+    let authors = await Author.find(searchQuery).exec()
+    // .skip((page.number - 1) * page.size)
+    // .limit(page.size)
+
+    let results = []
+    authors.map(author => {
+      results.push(authorExtractor.list(author))
+    })
+
+    return results
+  } catch (err) {
+    log.error(err)
+    return err
+  }
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#activation">activation</a></li><li><a href="global.html#all">all</a></li><li><a href="global.html#authentication">authentication</a></li><li><a href="global.html#authorize">authorize</a></li><li><a href="global.html#checkEmail">checkEmail</a></li><li><a href="global.html#checkUsername">checkUsername</a></li><li><a href="global.html#create">create</a></li><li><a href="global.html#emailExists">emailExists</a></li><li><a href="global.html#emailValidationCode">emailValidationCode</a></li><li><a href="global.html#fetchingResponseV3">fetchingResponseV3</a></li><li><a href="global.html#forgotPassword">forgotPassword</a></li><li><a href="global.html#generatePassword">generatePassword</a></li><li><a href="global.html#getAuthToken">getAuthToken</a></li><li><a href="global.html#getById">getById</a></li><li><a href="global.html#getCollaborationStories">getCollaborationStories</a></li><li><a href="global.html#getMyRekords">getMyStories</a></li><li><a href="global.html#getSharedStories">getSharedStories</a></li><li><a href="global.html#isValidEmail">isValidEmail</a></li><li><a href="global.html#log">log</a></li><li><a href="global.html#login">login</a></li><li><a href="global.html#myRekordr">myStories</a></li><li><a href="global.html#paginateV3">paginateV3</a></li><li><a href="global.html#queryForStorySearch">queryForStorySearch</a></li><li><a href="global.html#resetPassword">resetPassword</a></li><li><a href="global.html#search">search</a></li><li><a href="global.html#searchAuthors">searchAuthors</a></li><li><a href="global.html#send">send</a></li><li><a href="global.html#sendV3">sendV3</a></li><li><a href="global.html#server">server</a></li><li><a href="global.html#signUp">signUp</a></li><li><a href="global.html#singIn">singIn</a></li><li><a href="global.html#singUp">singUp</a></li><li><a href="global.html#tokenHasExpired">tokenHasExpired</a></li><li><a href="global.html#usernameExists">usernameExists</a></li><li><a href="global.html#validatePassword">validatePassword</a></li><li><a href="global.html#validateUsername">validateUsername</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Jul 22 2018 10:04:50 GMT-0400 (Eastern Daylight Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

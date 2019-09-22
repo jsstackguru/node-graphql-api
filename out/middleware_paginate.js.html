@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: middleware/paginate.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: middleware/paginate.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @file Paginate middleware
+ * @author Andrey Ponomarov &lt;andrey.ponom1222@gmail.com>
+ * @version 1.0
+ */
+const extend = require('extend')
+
+module.exports = (server, opts) => {
+  const defaults = {
+    paramsNames: {
+      page: 'page',
+      perPage: 'size'
+    },
+    defaults: {
+      page: 1,
+      perPage: 50
+    },
+    numbersOnly: false,
+    hostname: true
+  }
+  opts = extend(true, defaults, opts)
+
+  return (req, res, next) => {
+    let page = req.params[opts.paramsNames.page] ? req.params[opts.paramsNames.page].number : defaults.defaults.page
+    let perPage = req.params[opts.paramsNames.page] ? req.params[opts.paramsNames.page].size : defaults.defaults.perPage
+    req.paginate = {
+      page: parseInt(page),
+      perPage: parseInt(perPage)
+    }
+
+    let isPerPageSet = req.params[opts.paramsNames.page] &amp;&amp; typeof req.params[opts.paramsNames.page].perPage !== 'undefined'
+
+    delete req.params[opts.paramsNames.page]
+
+    page = req.paginate.page
+    perPage = req.paginate.perPage || 20
+    let params = {}
+    let baseUrl = ''
+
+    if (opts.hostname) {
+      baseUrl = req.connection.encrypted ? 'https://' : 'http://'
+      baseUrl += req.headers.host
+    }
+
+    // Copy the params object
+    extend(params, req.params)
+
+    // Add perPage param to params obejct in case it's been set originally
+    if (isPerPageSet) {
+      params[opts.paramsNames.perPage] = perPage
+    }
+
+    let paginate = {}
+
+    /**
+     * Generates the first, prev, next, last links
+     * @param  {Integer} [count]    The total number of elements to paginate. If no count is provided, no last page is added
+     * @return {Object}             A Hash like object with the links name as key and links as values
+     */
+    paginate.getLinks = (count) => {
+      let links = {}
+
+      if (opts.numbersOnly) {
+        // The current page is not the first one so we generate the first and prev links
+        if (page !== defaults.defaults.page) {
+          links.prev = page - 1
+          links.first = defaults.defaults.page
+        }
+        if (count !== undefined &amp;&amp; page * perPage &lt; count) {
+          links.last = Math.floor(count / perPage) + defaults.defaults.page
+        }
+        if (count === undefined || page * perPage &lt; count) {
+          links.next = page + 1
+        }
+
+        return links
+      }
+
+      // The current page is not the first one so we generate the first and prev links
+      if (page !== defaults.defaults.page) {
+        params.page = defaults.defaults.page
+        links.first = baseUrl + server.router.render(req.route.name, params, params)
+
+        params.page = page - 1
+        links.prev = baseUrl + server.router.render(req.route.name, params, params)
+
+        params.page = page
+        links.self = baseUrl + server.router.render(req.route.name, params, params)
+      }
+      if (count !== undefined &amp;&amp; page * perPage &lt; count) {
+        params.page = count % perPage === 0 ? count / perPage : Math.floor(count / perPage + defaults.defaults.page)
+        links.last = baseUrl + server.router.render(req.route.name, params, params)
+
+        params.page = page
+        links.self = baseUrl + server.router.render(req.route.name, params, params)
+      }
+
+      if (count === undefined || page * perPage &lt; count) {
+        params.page = page + 1
+        links.next = baseUrl + server.router.render(req.route.name, params, params)
+      }
+
+      return links
+    }
+
+    /**
+     * Generates the first, prev, next, last links
+     * @param  {Integer}    count  The total number of elements to paginate
+     * @return {undefined}
+     */
+    paginate.addLinks = (count) => {
+      var links = paginate.getLinks(count)
+      links = Object.keys(links).map(function (key) {
+        return '&lt;' + links[key] + '>; rel="' + key + '"'
+      })
+      res.header('Link', links.join(', '))
+    }
+
+    /**
+     * Generates a response, containing the given data and links to the other pages
+     * @param  {Array&lt;Object>} data     an array of Objects
+     * @param  {Integer} [count]        the total count of data. If count is not provided, the link to the last page won't be generated
+     * @return {Object}                 an Object containing the data, and links to the other pages
+     */
+    paginate.getResponse = (data, count) => {
+      return {
+        'data': data,
+        'links': res.paginate.getLinks(count),
+        'meta': {
+          'total-pages': paginate.getMaxPages(count)
+        }
+      }
+    }
+
+    /**
+     * Generates a paginated response. The data will be paginated, and links to the other pages will be generated
+     * @param  {Array&lt;Object>}  an array of Objects, to be paginated
+     * @return {Object}         an Object containing the paginated data, and links to the other pages
+     */
+    paginate.getPaginatedResponse = (data) => {
+      var index = (page - 1) * perPage
+
+      if (data.length &lt;= index || page &lt;= 0) {
+        return {
+          error: 'page ' + page + ' not found'
+        }
+      }
+
+      paginate.addLinks(data)
+
+      return paginate.getResponse(data.slice(index, index + perPage), data.length)
+    }
+
+    /**
+     * Sends a response, generated by the getResponse() method
+     * @param  {Array&lt;Object>} data     an array of Objects, to be paginated
+     * @param  {Integer} [count]        the total count of data. If count is not provided, the link to the last page won't be generated
+     */
+    paginate.send = (data, count) => {
+      res.send(paginate.getResponse(data, count))
+    }
+
+    /**
+     * Sends a paginated response, generated by the getPaginatedResponse() method
+     * @param  {Array&lt;Object>} data     an array of Objects, to be paginated
+     */
+    paginate.sendPaginated = (data) => {
+      var paginatedResponse = paginate.getPaginatedResponse(data)
+
+      if (paginatedResponse.error) {
+        res.status(404)
+      }
+      res.send(paginatedResponse)
+    }
+
+    /**
+     * Get maximum number of pages
+     * @param {Integer} count
+     * @return {Integer}
+     */
+    paginate.getMaxPages = (count) => {
+      return (count > perPage) ? Math.round(count / perPage) : 1
+    }
+
+    res.paginate = paginate
+    next()
+  }
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#activation">activation</a></li><li><a href="global.html#all">all</a></li><li><a href="global.html#authentication">authentication</a></li><li><a href="global.html#authorize">authorize</a></li><li><a href="global.html#checkEmail">checkEmail</a></li><li><a href="global.html#checkUsername">checkUsername</a></li><li><a href="global.html#create">create</a></li><li><a href="global.html#emailExists">emailExists</a></li><li><a href="global.html#emailValidationCode">emailValidationCode</a></li><li><a href="global.html#fetchingResponseV3">fetchingResponseV3</a></li><li><a href="global.html#forgotPassword">forgotPassword</a></li><li><a href="global.html#generatePassword">generatePassword</a></li><li><a href="global.html#getAuthToken">getAuthToken</a></li><li><a href="global.html#getById">getById</a></li><li><a href="global.html#getCollaborationStories">getCollaborationStories</a></li><li><a href="global.html#getMyRekords">getMyStories</a></li><li><a href="global.html#getSharedStories">getSharedStories</a></li><li><a href="global.html#isValidEmail">isValidEmail</a></li><li><a href="global.html#log">log</a></li><li><a href="global.html#login">login</a></li><li><a href="global.html#myRekordr">myStories</a></li><li><a href="global.html#paginateV3">paginateV3</a></li><li><a href="global.html#queryForStorySearch">queryForStorySearch</a></li><li><a href="global.html#resetPassword">resetPassword</a></li><li><a href="global.html#search">search</a></li><li><a href="global.html#searchAuthors">searchAuthors</a></li><li><a href="global.html#send">send</a></li><li><a href="global.html#sendV3">sendV3</a></li><li><a href="global.html#server">server</a></li><li><a href="global.html#signUp">signUp</a></li><li><a href="global.html#singIn">singIn</a></li><li><a href="global.html#singUp">singUp</a></li><li><a href="global.html#tokenHasExpired">tokenHasExpired</a></li><li><a href="global.html#usernameExists">usernameExists</a></li><li><a href="global.html#validatePassword">validatePassword</a></li><li><a href="global.html#validateUsername">validateUsername</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Jul 22 2018 10:04:50 GMT-0400 (Eastern Daylight Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+[
+ {
+   "_id": "5b28ccdff8e4a20e006a1b5b",
+   "author": "58eb78b94b432a21008c2347",
+   "story": "5939503417d85a0e003d3c21",
+   "active": true,
+   "created": "2018-06-19T09:29:03.701Z",
+   "invited": "58eb78b94b432a21008c2346",
+   "edit": true,
+   "__v": 0,
+   "accepted": true
+ },
+ {
+   "_id": "5b3bbb60acc9b50e002d01cb",
+   "author": "58eb78b94b432a21008c2346",
+   "story": "593f94bd17d85a0e003d3c34",
+   "active": true,
+   "created": "2018-07-03T18:07:28.958Z",
+   "invited": "58eb78b94b432a21008c2347",
+   "edit": false,
+   "__v": 0,
+   "accepted": false
+ },
+ {
+   "_id": "5b4a7ebdacc9b50e002d026c",
+   "author": "5b4a7ebdacc9b50e002d099a",
+   "story": "5b4a7ebdacc9b50e002d099b",
+   "active": false,
+   "created": "2018-07-14T22:52:45.239Z",
+   "invited": "5a561c27ea64260e00eb754b",
+   "edit": false,
+   "__v": 0,
+   "email": null,
+   "accepted": true
+ },
+ {
+   "_id": "5b5f7cf86093030e00e5c4b1",
+   "author": "58eb78b94b432a21008c2346",
+   "story": "5939503417d85a0e003d3c23",
+   "active": true,
+   "created": "2018-07-30T21:02:48.185Z",
+   "invited": "5b5f35a66093030e00e5c49d",
+   "edit": false,
+   "email": "testauthor1@istoryapp.com",
+   "__v": 0,
+   "accepted": false
+ }
+]

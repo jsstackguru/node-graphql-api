@@ -1,0 +1,63 @@
+{
+  "data": {
+    "collaborationInvites": {
+      "docs": [{
+        "author": {
+          "name": "sasha"
+        },
+        "invited": {
+          "username": "testauthor1",
+          "name": "Test Author1"
+        },
+        "story": {
+          "title": "Story #1"
+        },
+        "created": "Tue Sep 11 2018 00:00:00 GMT+0200 (Central European Summer Time)",
+        "email": null,
+        "_id": "5b28cd19f8e4a20e006a1b5d"
+      }, {
+        "author": {
+          "name": "sasha"
+        },
+        "invited": {
+          "username": "testauthor1",
+          "name": "Test Author1"
+        },
+        "story": {
+          "title": "Shared Collaboration Story #1"
+        },
+        "created": "Tue Sep 11 2018 00:00:00 GMT+0200 (Central European Summer Time)",
+        "email": null,
+        "_id": "5b28cd19f8e4a20e006a1b5c"
+      }, {
+        "author": {
+          "name": "sasha"
+        },
+        "invited": {
+          "username": "testauthor1",
+          "name": "Test Author1"
+        },
+        "story": {
+          "title": "Story #1"
+        },
+        "created": "Tue Jul 03 2018 20:07:28 GMT+0200 (Central European Summer Time)",
+        "email": null,
+        "_id": "5b3bbb60acc9b50e002d01cb"
+      }, {
+        "author": {
+          "name": "sasha"
+        },
+        "invited": {
+          "username": "testauthor1",
+          "name": "Test Author1"
+        },
+        "story": {
+          "title": "Shared Collaboration Story #1"
+        },
+        "created": "Mon Jul 30 2018 23:02:48 GMT+0200 (Central European Summer Time)",
+        "email": "testauthor1@istoryapp.com",
+        "_id": "5b5f7cf86093030e00e5c4b1"
+      }]
+    }
+  }
+}

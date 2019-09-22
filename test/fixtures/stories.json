@@ -1,0 +1,273 @@
+[
+  {
+      "_id": "593f94bd17d85a0e003d3c34",
+      "id": "593f94bd17d85a0e003d3c34",
+      "author": "58eb78b94b432a21008c2346",
+      "title": "Story #1",
+      "theme": {
+          "cover": "http://rekordr.s3.amazonaws.com/test/image.jpg"
+      },
+      "status": "public",
+      "deleted": false,
+      "active": true,
+      "created": "1497339069303",
+      "updated": "1497339307655",
+      "slug": "story-1",
+      "banInPublic": false,
+      "collaborators": [
+
+      ],
+      "pages": [
+          "593f94bd17d85a0e003d3c36",
+          "593f94bd17d85a0e003d3c37"
+      ],
+      "views": 3,
+      "share": {
+          "followers": true,
+          "link": true,
+          "search": true
+      }
+  },
+  {
+      "_id": "5939503417d85a0e003d3c19",
+      "id": "5939503417d85a0e003d3c19",
+      "author": "58eb78b94b432a21008c2346",
+      "title": "Story #2",
+      "theme": {
+          "cover": "http://rekordr.s3.amazonaws.com/test/image.jpg"
+      },
+      "status": "public",
+      "deleted": false,
+      "active": true,
+      "created": "1496928308442",
+      "updated": "1497009613039",
+      "slug": "story-2",
+      "banInPublic": false,
+      "collaborators": [
+          {
+              "author": "5a7d7373231b6b0e008fd2a6",
+              "edit": true
+          }
+
+      ],
+      "pages": [
+          "5939503417d85a0e003d3c1b",
+          "5b1905d6ba93fc0e00d2f2a7"
+      ],
+      "views": 1,
+      "share": {
+          "followers": true,
+          "link": true,
+          "search": true
+      }
+  },
+  {
+      "_id": "5939503417d85a0e003d3c20",
+      "id": "5939503417d85a0e003d3c20",
+      "author": "58eb78b94b432a21008c2347",
+      "title": "Story #3",
+      "theme": {
+          "cover": ""
+      },
+      "status": "private",
+      "deleted": false,
+      "active": true,
+      "created": "1496928308442",
+      "updated": "1497009613039",
+      "slug": "story-3",
+      "banInPublic": false,
+      "collaborators": [
+
+      ],
+      "pages": [
+          "5939503417d85a0e003d3c1d"
+      ],
+      "views": 1,
+      "share": {
+          "followers": false,
+          "link": false,
+          "search": false
+      }
+  },
+  {
+      "_id": "5939503417d85a0e003d3c21",
+      "id": "5939503417d85a0e003d3c21",
+      "author": "58eb78b94b432a21008c2347",
+      "title": "Collaboration Story #1",
+      "theme": {
+          "cover": ""
+      },
+      "status": "public",
+      "deleted": false,
+      "active": true,
+      "created": "1496928308442",
+      "updated": "1497009613039",
+      "slug": "collaboration-story-1",
+      "banInPublic": false,
+      "collaborators": [
+          {
+              "author": "58eb78b94b432a21008c2346",
+              "edit": true
+          }
+      ],
+      "pages": [
+          "5939503417d85a0e003d3c1c",
+          "5939503417d85a0e003d3c2d"
+      ],
+      "views": 1,
+      "share": {
+          "followers": true,
+          "link": false,
+          "search": false
+      }
+  },
+  {
+      "_id": "5939503417d85a0e003d3c22",
+      "id": "5939503417d85a0e003d3c22",
+      "author": "58eb78b94b432a21008c2347",
+      "title": "Collaboration Story #2",
+      "theme": {
+          "cover": ""
+      },
+      "status": "public",
+      "deleted": false,
+      "active": true,
+      "created": "1496928308442",
+      "updated": "1497009613039",
+      "slug": "collaboration-story-2",
+      "banInPublic": false,
+      "collaborators": [
+          {
+              "author": "58eb78b94b432a21008c2347",
+              "edit": true
+          }
+      ],
+      "pages": [
+          "5939503417d85a0e003d3c1e",
+          "5939503417d85a0e003d3c2f"
+      ],
+      "views": 1,
+      "share": {
+          "followers": false,
+          "link": false,
+          "search": false
+      }
+  },
+  {
+      "_id": "5939503417d85a0e003d3c23",
+      "id": "5939503417d85a0e003d3c23",
+      "author": "58eb78b94b432a21008c2346",
+      "title": "Shared Collaboration Story #1",
+      "theme": {
+          "cover": ""
+      },
+      "status": "public",
+      "deleted": false,
+      "active": true,
+      "created": "1496928308442",
+      "updated": "1497009613039",
+      "slug": "shared-collaboration-story-1",
+      "banInPublic": false,
+      "collaborators": [
+          {
+              "author": "58eb78b94b432a21008c2347",
+              "edit": false
+          }
+      ],
+      "pages": [
+          "5939503417d85a0e003d3c1e",
+          "5939503417d85a0e003d3c2f"
+      ],
+      "views": 100,
+      "share": {
+          "followers": true,
+          "link": true,
+          "search": true
+      }
+  },
+  {
+      "_id": "5939503417d85a0e403d3c26",
+      "id": "5939503417d85a0e403d3c26",
+      "author": "58eb78b94b432a21008c2346",
+      "title": "Lorem ipsum dolor 1",
+      "theme": {
+          "cover": ""
+      },
+      "status": "public",
+      "deleted": true,
+      "active": true,
+      "created": "1496928308442",
+      "updated": "1497009613039",
+      "slug": "lorem-ipsum-dolor-1",
+      "banInPublic": false,
+      "collaborators": [
+          {
+              "author": "58eb78b94b432a21008c2347",
+              "edit": false
+          }
+      ],
+      "pages": [
+          "5939503417d85a0e003d3c1e",
+          "5939503417d85a0e003d3c2f"
+      ],
+      "views": 100,
+      "share": {
+          "followers": true,
+          "link": true,
+          "search": true
+      }
+  },
+  {
+      "_id": "5b2fb7e2d216c70e00c357f7",
+      "id": "5b2fb7e2d216c70e00c357f7",
+      "author": "5a7d7373231b6b0e008fd2a6",
+      "title": "sajkov story",
+      "theme": {
+          "cover": ""
+      },
+      "status": "public",
+      "deleted": false,
+      "active": true,
+      "created": "2018-06-24T15:25:22.582Z",
+      "updated": "2018-07-14T22:53:32.482Z",
+      "slug": "test-2",
+      "banInPublic": false,
+      "collaborators": [],
+      "pages": [
+          "5b1905d6ba93fc0e00d2f2a6"
+      ],
+      "views": 22,
+      "share": {
+          "collaborators": true,
+          "followers": true,
+          "link": true,
+          "search": true
+      }
+  },
+  {
+    "_id": "5c499e1dea20ab39ff343a46",
+    "id": "5c499e1dea20ab39ff343a46",
+    "pages": [
+      "5c499e1dea20ab39ff343a47"
+    ],
+    "collaborators": [],
+    "author": "58eb78b94b432a21008c2346",
+    "title": "deleted 01",
+    "theme": {
+      "cover": ""
+    },
+    "status": "private",
+    "share": {
+      "collaborators": false,
+      "followers": false,
+      "link": false,
+      "search": false
+    },
+    "deleted": true,
+    "active": false,
+    "created": "1496928308442",
+    "updated": "1496928408442",
+    "slug": "deleted-1",
+    "deletedAt": "2018-06-21T09:45:12.002Z"
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "_id": "5a94178361c1960e00c088d4",
+    "platform": "ios",
+    "appVersion": "12",
+    "pushToken": "24828397b0e9102bc61d19f221f53d0348c2da1c973b0b45c23e54bfeefe834c",
+    "osVersion": "11.2.6",
+    "timezone": "Europe/Warsaw",
+    "locale": "pl-PL",
+    "author": "58eb78b94b432a21008c2346"
+  },
+  {
+    "_id": "5a9679dab0a07a0e00768f0b",
+    "platform": "ios",
+    "appVersion": "12",
+    "pushToken": "ea872eab971b4eedb86f6542055ba63d369892fee023a3bf180cec97cdfaca04",
+    "osVersion": "11.2.5",
+    "timezone": "Europe/Belgrade",
+    "locale": "en-RS",
+    "author": "58eb78b94b432a21008c2347"
+  },
+  {
+    "_id": "58eb78b94b432a21008c2348",
+    "platform": "ios",
+    "appVersion": "12",
+    "pushToken": "c643b5bcd844a829b424a08681d16d6b33afe48e4f1c5c86247b33ad6d55ec42",
+    "osVersion": "11.2.6",
+    "timezone": "America/New_York",
+    "locale": "en-US",
+    "author": "5a713822cfea9c0e00a5fa3f"
+  },
+  {
+    "_id": "5a538361ea64260e00eb7546",
+    "platform": "ios",
+    "appVersion": "12",
+    "pushToken": "53fa0905ec359a06bc88755217e76de6633a30087cf531b7131f031a92af5c46",
+    "osVersion": "11.2.5",
+    "timezone": "Europe/Belgrade",
+    "locale": "en-RS",
+    "author": "5a4f42e6161c0d0f007e4ac6"
+  },
+  {
+    "_id": "5a94178361c1960e00c088d1",
+    "platform": "ios",
+    "appVersion": "12",
+    "pushToken": "78fb4056e71846d9da53c89a872845780d5580115015bd8d97d10038e78d7228",
+    "osVersion": "11.2.6",
+    "timezone": "America/New_York",
+    "locale": "en-US",
+    "author": "5a713822cfea9c0e00a5fa3f"
+  }
+]

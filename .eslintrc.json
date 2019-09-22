@@ -1,0 +1,44 @@
+{
+  "env": {
+    "es6": true,
+    "node": true,
+    "mocha": true,
+    "jasmine": true,
+    "mongo": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "rules": {
+    "camelcase": 2,
+    "default-case": 0,
+    "eol-last": 2,
+    "handle-callback-err": 2,
+    "indent": [
+      "error",
+      2,
+      {"SwitchCase": 1}
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "no-console": 0,
+    "no-dupe-keys": 2,
+    "no-duplicate-case": 2,
+    "no-empty": 2,
+    "no-extra-semi": 2,
+    "no-irregular-whitespace": 2,
+    "require-await": 2,
+    "semi": [
+      "error",
+      "never"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ]
+  }
+}

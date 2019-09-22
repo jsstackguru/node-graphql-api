@@ -1,0 +1,118 @@
+[
+  {
+    "author": "58eb78b94b432a21008c2346",
+    "active": true,
+    "created": "2018-04-10 14:24:09+0200",
+    "updated": "2018-04-10 14:24:09+0200",
+    "timestamp": "",
+    "type": "collaboration_invitation_sent",
+    "data": {
+      "storyId": "593f94bd17d85a0e003d3c34",
+      "collaboratorId": "58eb78b94b432a21008c2347"
+    }
+  },
+  {
+    "author": "58eb78b94b432a21008c2346",
+    "active": true,
+    "created": "2018-04-10 14:26:09+0200",
+    "updated": "2018-04-10 14:26:09+0200",
+    "timestamp": "",
+    "type": "collaboration_invitation_accepted",
+    "data": {
+      "storyId": "593f94bd17d85a0e003d3c34",
+      "collaboratorId": "58eb78b94b432a21008c2347"
+    }
+  },
+  {
+    "author": "58eb78b94b432a21008c2346",
+    "active": true,
+    "created": "2018-07-10 14:56:09+0200",
+    "updated": "2018-07-10 14:56:09+0200",
+    "timestamp": "",
+    "type": "collaboration_leaved",
+    "data": {
+      "storyId": "593f94bd17d85a0e003d3c34",
+      "collaboratorId": "58eb78b94b432a21008c2348"
+    }
+  },
+  {
+    "author": "58eb78b94b432a21008c2346",
+    "active": true,
+    "created": "2018-07-11 14:56:09+0200",
+    "updated": "2018-07-11 14:56:09+0200",
+    "timestamp": "",
+    "type": "collaboration_removed",
+    "data": {
+      "storyId": "593f94bd17d85a0e003d3c34",
+      "collaboratorId": "5a538361ea64260e00eb7546"
+    }
+  },
+  {
+    "author": "58eb78b94b432a21008c2346",
+    "active": true,
+    "created": "2018-06-10 14:26:09+0200",
+    "updated": "2018-06-10 14:26:09+0200",
+    "timestamp": "",
+    "type": "story_created",
+    "data": {
+      "storyId": "593f94bd17d85a0e003d3c34"
+    }
+  },
+  {
+    "author": "58eb78b94b432a21008c2346",
+    "active": true,
+    "created": "2018-06-10 16:26:09+0200",
+    "updated": "2018-06-10 16:26:09+0200",
+    "timestamp": "",
+    "type": "page_created",
+    "data": {
+      "storyId": "593f94bd17d85a0e003d3c34"
+    }
+  },
+  {
+    "author": "58eb78b94b432a21008c2346",
+    "active": true,
+    "created": "2018-07-10 16:26:09+0200",
+    "updated": "2018-07-10 16:26:09+0200",
+    "timestamp": "",
+    "type": "story_updated",
+    "data": {
+      "storyId": "593f94bd17d85a0e003d3c34"
+    }
+  },
+  {
+    "author": "58eb78b94b432a21008c2346",
+    "active": true,
+    "created": "2018-07-11 16:26:09+0200",
+    "updated": "2018-07-11 16:26:09+0200",
+    "timestamp": "",
+    "type": "new_content",
+    "data": {
+      "storyId": "5939503417d85a0e003d3c23",
+      "pageId": "5ba9d942c61d3c0f00ec0e44",
+      "contents": [
+        "6d669ad0-c08e-11e8-ae20-fd79c470db9d",
+        "6d669ad1-c08e-11e8-ae20-fd79c470db9d",
+        "424ef710-c7a6-11e8-b4c5-2971eb1d35e1"
+      ]
+    }
+  },
+  {
+    "active": true,
+    "created": "2018-07-11 11:26:09+0200",
+    "timestamp": "",
+    "type": "system_message",
+    "data": {
+      "message": "test message"
+    }
+  },
+  {
+    "active": true,
+    "created": "2018-07-11 11:16:09+0200",
+    "timestamp": "",
+    "type": "system_message",
+    "data": {
+      "message": "test message 123"
+    }
+  }
+]

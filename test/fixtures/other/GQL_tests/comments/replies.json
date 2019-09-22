@@ -1,0 +1,28 @@
+{
+  "data": {
+    "replies": {
+      "docs": [{
+        "text": "komentar reply 1",
+        "id": "5b29f71bd216c70e00c357bc",
+        "deleted": "false",
+        "author": {
+          "name": "nikola"
+        }
+      }, {
+        "text": "komentar reply 2",
+        "id": "5b29f722d216c70e00c357bf",
+        "deleted": "false",
+        "author": {
+          "name": "nikola"
+        }
+      }, {
+        "text": "komentar reply 22",
+        "id": "5b29f722d216c70e00c357bb",
+        "deleted": "false",
+        "author": {
+          "name": "nikola"
+        }
+      }]
+    }
+  }
+}

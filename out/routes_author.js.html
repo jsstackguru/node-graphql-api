@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: routes/author.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: routes/author.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @file Routes for author
+ * @author Andrey Ponomarov &lt;andrey.ponom1222@gmail.com>
+ * @version 1.0
+ */
+
+const restify = require('restify')
+// Handles
+const authorHndl = require('../handles/author.handles')
+const utils = require('../lib/utils')
+// Services
+const emailService = require('../services/email')
+const log = require('../services/log').log
+
+/**
+ * Sign in author by username and password
+ */
+exports.singIn = async (req, res, next) => {
+  try {
+    const email = req.body.email
+    const pass = req.body.password
+
+    const user = await authorHndl.login(email, pass)
+
+    if (!user) {
+      var err = new restify.errors.NotFoundError('User doesn\'t exist')
+      return next(err)
+    } else {
+      res.send({
+        author: user
+      })
+    }
+  } catch (err) {
+    next.ifError(err)
+    return next(restify.InternalServerError(err))
+  }
+}
+
+/**
+ * Sign up new author
+ */
+exports.singUp = async (req, res, next) => {
+  try {
+    let user = req.body.user
+    // check if data exist
+    if (!user) {
+      return next(new restify.errors.BadRequestError('Missing parameters'))
+    }
+    // get user's data
+    let password = user.password
+    let password2 = user.password_confirmation
+    let email = user.email
+    let username = user.username.toLowerCase()
+    let name = user.name || username
+
+    // check parameters
+    if (!user || !password || !email || !username || !password2) {
+      return next(new restify.errors.BadRequestError('Missing parameters'))
+    }
+
+    // check if passwords are equal
+    if (password !== password2) {
+      return next(new restify.errors.BadRequestError('Insert equal passwords'))
+    }
+
+    // validate email
+    if (!utils.isValidEmail(email)) {
+      return next(new restify.errors.BadRequestError('Insert valid email address'))
+    }
+    // validate username
+    let usernameError = utils.validateUsername(username)
+    if (usernameError) {
+      return next(new restify.errors.BadRequestError(usernameError))
+    }
+    // validate password
+    let passwordError = utils.validatePassword(password)
+    if (passwordError) {
+      return next(new restify.errors.BadRequestError(passwordError))
+    }
+
+    let newAuthor = await authorHndl.signUp(email, username, password, name)
+
+    if (!newAuthor) {
+      return next(new restify.errors.BadRequestError('Account has not been created'))
+    }
+
+    // send activation email
+    emailService.activation(newAuthor, newAuthor.token)
+
+    res.send(newAuthor)
+
+  } catch (err) {
+    console.log(err)
+    log.error(err)
+    return next(err)
+  }
+}
+
+/**
+ * Forgot password
+ */
+exports.forgotPassword = async (req, res, next) => {
+  try {
+    const email = req.body.email
+    // check if email
+    if (!email) {
+      return next(new restify.errors.BadRequestError('Missing email address'))
+    }
+
+    let result = await authorHndl.forgotPassword(email)
+
+    if (result.author) {
+      // send email to user with link
+      emailService.resetPassword(result.author, result.code)
+    }
+
+    res.send({
+      status: true,
+      message: 'Email link send on email ' + email
+    })
+
+  } catch (err) {
+    log.error(err)
+    return next(restify.InternalServerError(err))
+  }
+}
+
+/**
+ * Check username
+ */
+exports.checkUsername = async (req, res, next) => {
+  try {
+    const username = req.params.username
+
+    if (!username) {
+      return next(new restify.errors.BadRequestError('Missing username'))
+    }
+
+    // find username in database
+    let exists = await authorHndl.usernameExists(username)
+
+    if (exists) {
+      return next(new restify.errors.BadRequestError('Username already taken'))
+    }
+
+    res.send({
+      status: true,
+      message: 'Username is available'
+    })
+
+  } catch (err) {
+    log.error(err)
+    return next(restify.InternalServerError(err))
+  }
+}
+
+/**
+ * Check email
+ */
+exports.checkEmail = async (req, res, next) => {
+  try {
+    const email = req.params.email
+
+    if (!email) {
+      return next(new restify.errors.BadRequestError('Missing email'))
+    }
+
+    // find email in database
+    let exists = await authorHndl.emailExists(email)
+
+    if (exists) {
+      return next(new restify.errors.BadRequestError('Email already taken'))
+    }
+
+    res.send({
+      status: true,
+      message: 'Email is available'
+    })
+
+  } catch (err) {
+    log.error(err)
+    return next(restify.InternalServerError(err))
+  }
+}
+
+/**
+ * Search authors by username and name
+ * 
+ * @param req
+ * @param res
+ * @param next
+ * @returns {Promise.&lt;*>}
+ */
+exports.searchAuthors = async (req, res, next) => {
+  try {
+
+    const term = req.params.term
+    const page = req.params.page
+
+    let data = await authorHndl.search(term, page)
+
+    res.paginate.sendPaginated(data)
+
+  } catch (err) {
+    log.error(err)
+    return next(restify.InternalServerError(err))
+  }
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#activation">activation</a></li><li><a href="global.html#all">all</a></li><li><a href="global.html#authentication">authentication</a></li><li><a href="global.html#authorize">authorize</a></li><li><a href="global.html#checkEmail">checkEmail</a></li><li><a href="global.html#checkUsername">checkUsername</a></li><li><a href="global.html#create">create</a></li><li><a href="global.html#emailExists">emailExists</a></li><li><a href="global.html#emailValidationCode">emailValidationCode</a></li><li><a href="global.html#fetchingResponseV3">fetchingResponseV3</a></li><li><a href="global.html#forgotPassword">forgotPassword</a></li><li><a href="global.html#generatePassword">generatePassword</a></li><li><a href="global.html#getAuthToken">getAuthToken</a></li><li><a href="global.html#getById">getById</a></li><li><a href="global.html#getCollaborationStories">getCollaborationStories</a></li><li><a href="global.html#getMyRekords">getMyStories</a></li><li><a href="global.html#getSharedStories">getSharedStories</a></li><li><a href="global.html#isValidEmail">isValidEmail</a></li><li><a href="global.html#log">log</a></li><li><a href="global.html#login">login</a></li><li><a href="global.html#myRekordr">myStories</a></li><li><a href="global.html#paginateV3">paginateV3</a></li><li><a href="global.html#queryForStorySearch">queryForStorySearch</a></li><li><a href="global.html#resetPassword">resetPassword</a></li><li><a href="global.html#search">search</a></li><li><a href="global.html#searchAuthors">searchAuthors</a></li><li><a href="global.html#send">send</a></li><li><a href="global.html#sendV3">sendV3</a></li><li><a href="global.html#server">server</a></li><li><a href="global.html#signUp">signUp</a></li><li><a href="global.html#singIn">singIn</a></li><li><a href="global.html#singUp">singUp</a></li><li><a href="global.html#tokenHasExpired">tokenHasExpired</a></li><li><a href="global.html#usernameExists">usernameExists</a></li><li><a href="global.html#validatePassword">validatePassword</a></li><li><a href="global.html#validateUsername">validateUsername</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Jul 22 2018 10:04:50 GMT-0400 (Eastern Daylight Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

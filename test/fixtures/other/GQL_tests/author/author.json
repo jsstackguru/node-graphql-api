@@ -1,0 +1,22 @@
+{
+  "data": {
+    "author": {
+      "id": "58eb78b94b432a21008c2346",
+      "name": "sasha",
+      "following": {
+        "docs": [{
+          "name": "Test Author1"
+        }],
+        "total": 1
+      },
+      "followers": {
+        "docs": [{
+          "name": "nikola"
+        }, {
+          "name": "sajko"
+        }],
+        "total": 2
+      }
+    }
+  }
+}

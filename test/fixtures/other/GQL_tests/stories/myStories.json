@@ -1,0 +1,27 @@
+{
+  "data": {
+    "myStories": {
+      "docs": [
+        {
+          "title": "Shared Collaboration Story #1",
+          "slug": "shared-collaboration-story-1",
+          "views": 100
+        },
+        {
+          "title": "Story #1",
+          "slug": "story-1",
+          "views": 3
+        },
+        {
+          "title": "Story #2",
+          "slug": "story-2",
+          "views": 1
+        }
+      ],
+      "total": 3,
+      "limit": 10,
+      "page": 1,
+      "pages": 1
+    }
+  }
+}

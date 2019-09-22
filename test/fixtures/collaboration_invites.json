@@ -1,0 +1,68 @@
+[
+  {
+    "_id": "5b28cd19f8e4a20e006a1b5d",
+    "author": "58eb78b94b432a21008c2346",
+    "story": "593f94bd17d85a0e003d3c34",
+    "active": true,
+    "created": "2018-09-11 00:00:00+0200",
+    "invited": "58eb78b94b432a21008c2347",
+    "email": null,
+    "edit": true,
+    "accepted": false
+  },
+  {
+    "_id": "5b28cd19f8e4a20e006a1b5c",
+    "author": "58eb78b94b432a21008c2346",
+    "story": "5939503417d85a0e003d3c23",
+    "active": true,
+    "created": "2018-09-11 00:00:00+0200",
+    "invited": "58eb78b94b432a21008c2347",
+    "email": null,
+    "edit": true,
+    "accepted": false
+  },
+  {
+    "_id": "5b28cd19f8e4a20e006a1b51",
+    "author": "58eb78b94b432a21008c2347",
+    "story": "5939503417d85a0e003d3c20",
+    "active": true,
+    "created": "2018-09-11 00:00:00+0200",
+    "invited": "58eb78b94b432a21008c2348",
+    "email": null,
+    "edit": true,
+    "accepted": false
+  },
+  {
+    "_id": "5b28cd19f8e4a20e006a1b5f",
+    "author": "58eb78b94b432a21008c2347",
+    "story": "593f94bd17d85a0e003d3c35",
+    "active": true,
+    "created": "2018-09-11 00:00:00+0200",
+    "invited": "58eb78b94b432a21008c2348",
+    "email": null,
+    "edit": true,
+    "accepted": false
+  },
+  {
+    "_id": "5b3bbb60acc9b50e002d01cb",
+    "author": "58eb78b94b432a21008c2346",
+    "story": "593f94bd17d85a0e003d3c34",
+    "active": true,
+    "created": "2018-07-03T18:07:28.958Z",
+    "invited": "58eb78b94b432a21008c2347",
+    "email": null,
+    "edit": false,
+    "accepted": false
+  },
+  {
+    "_id": "5b5f7cf86093030e00e5c4b1",
+    "author": "58eb78b94b432a21008c2346",
+    "story": "5939503417d85a0e003d3c23",
+    "active": true,
+    "created": "2018-07-30T21:02:48.185Z",
+    "invited": "58eb78b94b432a21008c2347",
+    "edit": false,
+    "email": "testauthor1@istoryapp.com",
+    "accepted": false
+  }
+]

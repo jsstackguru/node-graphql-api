@@ -1,0 +1,24 @@
+{
+  "data": {
+    "profile": {
+      "name": "sasha",
+      "username": "sasha",
+      "stories": {
+        "docs": [
+          {
+            "title": "Story #2"
+          },
+          {
+            "title": "Story #1"
+          },
+          {
+            "title": "Shared Collaboration Story #1"
+          }
+        ]
+      },
+      "avatar": "http://rekordr.s3.amazonaws.com/profile/58eb78b94b432a21008c2346/165627e0-1de9-11e7-aeb3-d3719b357d20.jpeg",
+      "following": 1,
+      "followers": 2
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "myFeed": {
+      "docs": [{
+        "title": "Story #3",
+        "slug": "story-3",
+        "views": 1,
+        "deleted": "false"
+      }, {
+        "title": "Collaboration Story #2",
+        "slug": "collaboration-story-2",
+        "views": 1,
+        "deleted": "false"
+      }, {
+        "title": "Collaboration Story #1",
+        "slug": "collaboration-story-1",
+        "views": 1,
+        "deleted": "false"
+      }],
+      "total": 3,
+      "limit": 10,
+      "page": 1,
+      "pages": 1
+    }
+  }
+}

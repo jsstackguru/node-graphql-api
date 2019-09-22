@@ -1,0 +1,16 @@
+{
+  "data": {
+    "myCollaboration": {
+      "docs": [{
+        "title": "Collaboration Story #2",
+        "slug": "collaboration-story-2",
+        "views": 1,
+        "deleted": "false"
+      }],
+      "total": 1,
+      "limit": 10,
+      "page": 1,
+      "pages": 1
+    }
+  }
+}
