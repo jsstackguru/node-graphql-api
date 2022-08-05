@@ -29,7 +29,7 @@
     "jsonwebtoken": "^8.3.0",
     "mkdirp": "^0.5.1",
     "mock-aws-s3": "^3.0.0",
-    "mongoose": "^5.4.3",
+    "mongoose": "^5.7.5",
     "mongoose-api-query": "^0.1.1-pre",
     "mongoose-migrate-2": "^0.2.5",
     "mongoose-paginate": "^5.0.3",
